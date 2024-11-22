@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('start');
 });
 
 Route::get('/card', function () {
@@ -28,3 +29,15 @@ Route::get('/quiz', function () {
 Route::get('/word', function () {
     return view('word');
 });
+
+Route::get('/start', function () {
+    return view('start');
+});
+
+Route::get('/register', [UserController::class, 'showRegisterForm']);
+Route::post('/register', [UserController::class, 'register'])->name('register');
+
+Route::get('/map', function () {
+    return view('map');
+})->name('map');
+
