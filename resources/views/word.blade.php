@@ -48,7 +48,7 @@
   <main>
     <section id="game">
       <div id="image-container">
-        <img id="game-image" src="images/img8.png" alt="Gambar yang harus ditebak">
+        <img id="game-image" src="images/karbohidrat.png" alt="Gambar yang harus ditebak">
       </div>
       <div id="letters-container"></div>
       <div id="input-container">

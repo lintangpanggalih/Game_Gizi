@@ -10,7 +10,7 @@ body {
     height: 100vh;
 }
 .card .front-view img{
-    width: 40px;
+    max-width: 80px;
 }
 
 .card .back-view img{
@@ -18,9 +18,13 @@ body {
 }
 
 .container{
+    background-image: url("/images/bg2.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
     height: 400px;
     width: 400px;
-    background: linear-gradient(to right, #fc6767, #ec008c);
+    /* background: linear-gradient(to right, #fc6767, #ec008c); */
     border-radius: 10px;
     padding: 25px;
     box-shadow: 0 0 10px;

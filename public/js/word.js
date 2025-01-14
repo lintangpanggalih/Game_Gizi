@@ -1,10 +1,10 @@
 // Data gambar dan jawaban
 const data = [
-    { image: "images/img8.png", word: "KELINCI" },
-    { image: "images/harimau.png", word: "HARIMAU" },
-    { image: "images/burung.png", word: "BURUNG" },
-    { image: "images/gajah.png", word: "GAJAH" },
-    { image: "images/monyet.png", word: "MONYET" }
+    { image: "images/karbohidrat.png", word: "KARBOHIDRAT" },
+    { image: "images/protein.png", word: "PROTEIN" },
+    { image: "images/garam.png", word: "GARAM" },
+    { image: "images/airputih.png", word: "AIRPUTIH" },
+    { image: "images/gula.png", word: "GULA" }
   ];
   
   // Inisialisasi

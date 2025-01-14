@@ -46,14 +46,10 @@
             background-color: rgba(255, 165, 0, 0.8);
         }
         /* Sesuaikan posisi tombol */
-        #button1 { top: 30%; left: 50%; }
-        #button2 { top: 50%; left: 50%; }
-        #button3 { top: 70%; left: 30%; }
-        #button4 { 
-            top: 80%; 
-            left: 55%; 
-            background-color: #e74c3c;
-            }
+        #button1 { top: 35%; left: 50%; }
+        #button2 { top: 45%; left: 50%; }
+        #button3 { top: 55%; left: 40%; }
+        #button4 { top: 65%; left: 55%; }
     </style>
 </head>
 <body>
@@ -61,10 +57,11 @@
     <p>Klik pada area peta untuk menemukan petunjuk!</p> -->
     <div class="map-container">
         <img src="images/map.png" alt="Peta Harta Karun">
-        <button id="button1" class="map-button" onclick="showMessage('Petunjuk 1: Lihat ke arah pohon besar!')">Area 1</button>
-        <button id="button2" class="map-button" onclick="showMessage('Petunjuk 2: Gali di dekat batu besar!')">Area 2</button>
-        <button id="button3" class="map-button" onclick="showMessage('Petunjuk 3: Cari di bawah air terjun!')">Area 3</button>
-        <button id="button4" class="map-button" onclick=><a href="{{ route('landing.cardrule')}}">START NOW</a></button>
+        <button id="button1" class="map-button" onclick="showMessage('Petunjuk 1: Lihat ke arah pohon besar!')"><a href="{{ route('landing.card')}}">Area 1</a></button>
+        <button id="button2" class="map-button" onclick="showMessage('Petunjuk 2: Gali di dekat batu besar!')"><a href="{{ route('landing.drag')}}">Area 2</a></button>
+        <button id="button3" class="map-button" onclick="showMessage('Petunjuk 3: Cari di bawah air terjun!')"><a href="{{ route('landing.quiz')}}">Area 3</a></button>
+        <button id="button4" class="map-button" onclick="showMessage('Petunjuk 4: Cari di bawah air terjun!')"><a href="{{ route('landing.word')}}">Area 4</a></button>
+        <!-- <button id="button4" class="map-button" onclick=><a href="{{ route('landing.cardrule')}}">START NOW</a></button> -->
     </div>
     <script>
         function showMessage(message) {
