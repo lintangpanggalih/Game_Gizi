@@ -8,16 +8,28 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
+            display: flex;
             background-color: #f4f4f4;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
         }
         .map-container {
+            background-image: url("/images/bg2.png");
+            /* background-position: center; */
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 80%;
             position: relative;
             display: inline-block;
-            margin: 20px;
+            margin: auto;
+            /* margin: 20px; */
         }
         .map-container img {
+            padding: 150px 0;
             width: 100%;
-            max-width: 600px;
+            max-width: 600px;   
             border: 2px solid #8B4513;
             border-radius: 8px;
         }
@@ -45,8 +57,8 @@
     </style>
 </head>
 <body>
-    <h1>Peta Harta Karun</h1>
-    <p>Klik pada area peta untuk menemukan petunjuk!</p>
+    <!-- <h1>Peta Harta Karun</h1>
+    <p>Klik pada area peta untuk menemukan petunjuk!</p> -->
     <div class="map-container">
         <img src="images/map.png" alt="Peta Harta Karun">
         <button id="button1" class="map-button" onclick="showMessage('Petunjuk 1: Lihat ke arah pohon besar!')">Area 1</button>

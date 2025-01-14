@@ -7,7 +7,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    height: 100vh;
 }
 .card .front-view img{
     width: 40px;
@@ -18,8 +18,8 @@ body {
 }
 
 .container{
-    height: 500px;
-    width: 500px;
+    height: 400px;
+    width: 400px;
     background: linear-gradient(to right, #fc6767, #ec008c);
     border-radius: 10px;
     padding: 25px;

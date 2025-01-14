@@ -19,31 +19,32 @@
             height: 100vh;
         }
 
-        .container-md {
+        .container{
             text-align: center;
-            /* max-width: 1200px;
-            margin: auto;
+            /* max-width: 500px; */
+            /* max-height: fit-content; */
+            /* margin: auto;
             padding: 10px;
             background: #fff; */
             /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
             /* border-radius: 10px; */
         }
-
+        
         .hero-image {
-            background-image: url("/images/bg.png");
-            background-color: #cccccc;
-            height: 500px;
+            /* background-color: #cccccc; */
+            background-image: url("/images/bg2.png");
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            position: relative;
+            height: 80%;
+            /* position: relative; */
 
         }
 
         .image img {
             width: 100%;
-            max-width: 1200px;
-            margin-top: 20px;
+            /* max-width: 500px; */
+            /* margin-top: 20px; */
             /* border-radius: 10px; */
         }
 
@@ -96,13 +97,13 @@
     </style>
 </head>
 <body>
-    <div class="container-md">
+    <div class="container">
         <!-- <div class="title">You Are</div>
         <div class="subtitle">What You Eat!</div> -->
 
         <div class="hero-image">
         <div class="image">
-            <img src="/images/lady.png" alt="Woman eating strawberry">
+            <img src="/images/lady2.png" alt="Woman eating strawberry">
         </div>
         <br>
         <a class="btn btn-danger" href="{{ route('landing.biodata')}}" role="button">START NOW</a>

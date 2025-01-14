@@ -1,29 +1,50 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} */
 
-body {
+/* body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     text-align: center;
+} */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: #f3f3f3; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    height: 100vh;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
+.container{
+    background-image: url("/images/bg2.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 80%;
+    /* width: 80%;
+    margin: 0 auto; */
+}
+
+.container img{
+    width: 60%;
 }
 
 h1 {
     margin-bottom: 20px;
 }
 
-.images {
+/* .images {
     display: flex;
     justify-content: space-around;
     margin-bottom: 20px;
-}
+} */
 
 .image {
     width: 100px;
@@ -39,20 +60,23 @@ h1 {
     background-color: red;
 }
 
-.answers {
+/* .answers {
     display: flex;
     justify-content: space-around;
     margin-bottom: 20px;
-}
+} */
 
 .answer {
     width: 100px;
+    height: 100px;
+    cursor: pointer;
+    /* width: 100px;
     height: 50px;
     line-height: 50px;
     border: 2px solid #333;
     margin: 0 10px;
     cursor: pointer;
-    background-color: #fff;
+    background-color: #fff; */
 }
 
 .answer:hover {

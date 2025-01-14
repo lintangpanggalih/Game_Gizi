@@ -25,7 +25,7 @@ class UserController extends Controller
 
         User::create($request->all());
 
-        return redirect('/map')->with('success', 'Registrasi berhasil!');
+        return redirect()->route('landing.map');
     }
 }
 

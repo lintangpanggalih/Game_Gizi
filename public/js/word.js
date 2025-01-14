@@ -1,6 +1,6 @@
 // Data gambar dan jawaban
 const data = [
-    { image: "images/kelinci.png", word: "KELINCI" },
+    { image: "images/img8.png", word: "KELINCI" },
     { image: "images/harimau.png", word: "HARIMAU" },
     { image: "images/burung.png", word: "BURUNG" },
     { image: "images/gajah.png", word: "GAJAH" },

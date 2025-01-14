@@ -8,6 +8,8 @@
     <title>JavaScript - Card Game</title>
     <link rel="stylesheet" href="{{ asset('css/card.css') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/2745e261bc.js"></script>
     <style>
         #cardinfo {
@@ -100,49 +102,49 @@
             <li class="card">
                 <div class="view front-view"></div>
                 <div class="view back-view">
-                    <img src="/images/img-1.png" data-id="card-img-1" alt="Card Image">
+                    <img class="pic" src="/images/img1.png" data-id="card-img-1" alt="Card Image">
                 </div>
             </li>
             <li class="card">
                 <div class="view front-view"></div>
                 <div class="view back-view">
-                    <img src="/images/img-2.png" data-id="card-img-2" alt="card-image">
+                    <img class="pic" src="/images/img2.png" data-id="card-img-2" alt="card-image">
                 </div>
             </li>
             <li class="card">
                 <div class="view front-view"></div>
                 <div class="view back-view">
-                    <img src="/images/img-3.png" data-id="card-img-3" alt="Card Image">
+                    <img class="pic" src="/images/img3.png" data-id="card-img-3" alt="Card Image">
                 </div>
             </li>
             <li class="card">
                 <div class="view front-view"></div>
                 <div class="view back-view">
-                    <img src="/images/img-4.png" data-id="card-img-4" alt="Card Image">
+                    <img class="pic" src="/images/img4.png" data-id="card-img-4" alt="Card Image">
                 </div>
             </li>
             <li class="card">
                 <div class="view front-view"></div>
                 <div class="view back-view">
-                    <img src="/images/img-5.png" data-id="card-img-5" alt="Card Image">
+                    <img class="pic" src="/images/img5.png" data-id="card-img-5" alt="Card Image">
                 </div>
             </li>
             <li class="card">
                 <div class="view front-view"></div>
                 <div class="view back-view">
-                    <img src="/images/img-6.png" data-id="card-img-6" alt="Card Image">
+                    <img class="pic" src="/images/img6.png" data-id="card-img-6" alt="Card Image">
                 </div>
             </li>
             <li class="card">
                 <div class="view front-view"></div>
                 <div class="view back-view">
-                    <img src="/images/img-7.png" data-id="card-img-7" alt="Card Image">
+                    <img class="pic" src="/images/img7.png" data-id="card-img-7" alt="Card Image">
                 </div>
             </li>
             <li class="card">
                 <div class="view front-view"></div>
                 <div class="view back-view">
-                    <img src="/images/img-8.png" data-id="card-img-8" alt="Card Image">
+                    <img class="pic" src="/images/img8.png" data-id="card-img-8" alt="Card Image">
                 </div>
             </li>
         </ul>

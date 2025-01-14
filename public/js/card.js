@@ -75,17 +75,17 @@ function shuffleCard(){
     matchedCard = 0;
     cardOne = cardTwo = "";
 
-    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8]; //creating array of 16 items and each item is repeated twice
-    arr.sort(() => Math.random() > 0.5 ? 1 : -1);//sorting array item randomly
+    // let arr = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8]; //creating array of 16 items and each item is repeated twice
+    // arr.sort(() => Math.random() > 0.5 ? 1 : -1);//sorting array item randomly
 
-    cards.forEach((card, index) => { 
-        card.classList.remove('flip');
-        card.addEventListener('click', flipCard);
+    // cards.forEach((card, index) => { 
+    //     card.classList.remove('flip');
+    //     card.addEventListener('click', flipCard);
 
-        let imgTag = card.querySelector('img');
-        imgTag.src = `images/img-${arr[index]}.png`;
-        imgTag.setAttribute('data-id', `card-img-${arr[index]}`);
-    });
+    //     let imgTag = card.querySelector('img');
+    //     imgTag.src = `images/img-${arr[index]}.png`;
+    //     imgTag.setAttribute('data-id', `card-img-${arr[index]}`);
+    // });
 }
 shuffleCard();
 
