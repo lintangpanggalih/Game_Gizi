@@ -34,19 +34,25 @@
             background-color: rgba(255, 165, 0, 0.8);
         }
         /* Sesuaikan posisi tombol */
-        #button1 { top: 30%; left: 20%; }
+        #button1 { top: 30%; left: 50%; }
         #button2 { top: 50%; left: 50%; }
         #button3 { top: 70%; left: 30%; }
+        #button4 { 
+            top: 80%; 
+            left: 55%; 
+            background-color: #e74c3c;
+            }
     </style>
 </head>
 <body>
     <h1>Peta Harta Karun</h1>
     <p>Klik pada area peta untuk menemukan petunjuk!</p>
     <div class="map-container">
-        <img src="https://via.placeholder.com/600x400?text=Gambar+Peta+Harta+Karun" alt="Peta Harta Karun">
+        <img src="images/map.png" alt="Peta Harta Karun">
         <button id="button1" class="map-button" onclick="showMessage('Petunjuk 1: Lihat ke arah pohon besar!')">Area 1</button>
         <button id="button2" class="map-button" onclick="showMessage('Petunjuk 2: Gali di dekat batu besar!')">Area 2</button>
         <button id="button3" class="map-button" onclick="showMessage('Petunjuk 3: Cari di bawah air terjun!')">Area 3</button>
+        <button id="button4" class="map-button" onclick=><a href="{{ route('landing.cardrule')}}">START NOW</a></button>
     </div>
     <script>
         function showMessage(message) {

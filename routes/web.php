@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\LandingController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,30 +16,42 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', function () {
-    return view('start');
+route::get('map', [LandingController::class, 'map'])->name('landing.map');
+route::get('card', [LandingController::class, 'card'])->name('landing.card');
+route::get('quiz', [LandingController::class, 'quiz'])->name('landing.quiz');
+route::get('word', [LandingController::class, 'word'])->name('landing.word');
+route::get('drag', [LandingController::class, 'drag'])->name('landing.drag');
+route::get('biodata', [LandingController::class, 'biodata'])->name('landing.biodata');
+route::get('cardrule', [LandingController::class, 'cardrule'])->name('landing.cardrule');
+route::get('wordrule', [LandingController::class, 'wordrule'])->name('landing.wordrule');
+route::resource('/', LandingController::class);
+
+Route::get('gamerule', function () {
+    return view('gamerule');
 });
 
-Route::get('/card', function () {
-    return view('card');
-});
+// Route::get('/card', function () {
+//     return view('card');
+// });
 
-Route::get('/quiz', function () {
-    return view('quiz');
-});
+// Route::get('/quiz', function () {
+//     return view('quiz');
+// });
 
-Route::get('/word', function () {
-    return view('word');
-});
+// Route::get('/word', function () {
+//     return view('word');
+// });
 
-Route::get('/start', function () {
-    return view('start');
-});
+// Route::get('/start', function () {
+//     return view('start');
+// });
+
+// Route::get('/map', function () {
+//     return view('map');
+// })->name('map');
 
 Route::get('/register', [UserController::class, 'showRegisterForm']);
 Route::post('/register', [UserController::class, 'register'])->name('register');
 
-Route::get('/map', function () {
-    return view('map');
-})->name('map');
+
 

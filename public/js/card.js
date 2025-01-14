@@ -3,7 +3,19 @@ let cardOne, cardTwo;
 let disableDeck = false;
 let matchedCard = 0; 
 
-
+$('#cardinfo').on('click', function () {
+    $(this).fadeOut()
+    console.log(matchedCard);
+    if(matchedCard == 8){ // if matched value is 8 that means user has matched all the cards
+        $('#cardscore').fadeIn()
+        console.log('PPPPPPP');
+        
+        // setTimeout(() => { 
+        //     return shuffleCard();
+        // }, 1200); //calling shuffleCard function after 1s
+    }
+    
+})
 function flipCard(e){ 
     let clickedCard = e.target; //getting user clicked card
 
@@ -17,23 +29,26 @@ function flipCard(e){
 
         disableDeck = true;
 
-        let cardOneImg = cardOne.querySelector('img').src, 
-        cardTwoImg = cardTwo.querySelector('img').src; 
+        let cardOneImg = cardOne.querySelector('img').getAttribute('data-id'), 
+        cardTwoImg = cardTwo.querySelector('img').getAttribute('data-id'); 
         matchCards(cardOneImg, cardTwoImg);
     }
 }
 
 function matchCards(img1, img2){ 
-
+    // console.log(img1, img2);
+    
     if(img1 === img2){ // if two cards img matched
         matchedCard++; //increment matched value by one
-        if(matchedCard == 8){ // if matched value is 8 that means user has matched all the cards
+        $('#cardinfo').fadeIn()
+        // if(matchedCard == 8){ // if matched value is 8 that means user has matched all the cards
+        //     $('#cardscore').fadeIn()
+        //     // setTimeout(() => { 
+        //     //     return shuffleCard();
+        //     // }, 1200); //calling shuffleCard function after 1s
+        // }
 
-            setTimeout(() => { 
-                return shuffleCard();
-            }, 1200); //calling shuffleCard function after 1s
-        }
-
+        // console.log(matchedCard);
         cardOne.removeEventListener('click', flipCard);
         cardTwo.removeEventListener('click', flipCard);
         cardOne = cardTwo = '';//7.4
@@ -69,6 +84,7 @@ function shuffleCard(){
 
         let imgTag = card.querySelector('img');
         imgTag.src = `images/img-${arr[index]}.png`;
+        imgTag.setAttribute('data-id', `card-img-${arr[index]}`);
     });
 }
 shuffleCard();

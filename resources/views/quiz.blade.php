@@ -15,8 +15,8 @@
       <div class="options" id="options"></div>
     </div>
     <div class="result" id="result"></div>
-    <button class="restart" id="restart" style="display: none;">Mulai Lagi</button>
+    <button class="next" id="next" style="display: none;" onclick=><a href="{{ route('landing.map')}}">Next</a></button>
   </div>
-  <script src="/js/quiz.js"></script>
+  <script src="/js/quiz.js?v={{ \Str::uuid(); }}"></script>
 </body>
 </html>

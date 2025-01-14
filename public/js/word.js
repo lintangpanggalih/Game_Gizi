@@ -17,6 +17,16 @@ const data = [
   const guessWordElement = document.getElementById("guess-word");
   const statusElement = document.getElementById("status");
   
+  $('#wordinfo').on('click', function () {
+    $(this).fadeOut()
+    console.log(currentIndex);
+    if(currentIndex == 4){ // if matched value is 4 that means user has answer all words
+        $('#wordscore').fadeIn()
+        console.log('PPPPPPP');
+    }
+    
+})
+  
   // Fungsi untuk memulai game
   function startGame() {
     // Ambil data gambar dan kata saat ini
@@ -52,8 +62,9 @@ const data = [
     button.disabled = true;
   
     if (guessedWord === currentWord) {
-      statusElement.textContent = "Selamat! Kamu berhasil!";
-      setTimeout(nextRound, 2000);
+      // statusElement.textContent = "Selamat! Kamu berhasil!";
+      $('#wordinfo').fadeIn()
+      setTimeout(nextRound, 1);
     }
   }
   
