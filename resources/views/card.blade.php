@@ -1,157 +1,207 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('wrapper')
+@section('title')
+    Home
+@endsection
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript - Card Game</title>
-    <link rel="stylesheet" href="{{ asset('css/card.css') }}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/2745e261bc.js"></script>
-    <style>
-        #cardinfo {
-            position: absolute;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.6);
-            width: 100%;
-            z-index: 10;
-            display: none;
-        }
+<link rel="stylesheet" href="{{ asset('css/card.css') }}">
+<style>
+    #cardinfo {
+        position: absolute;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 100%;
+        z-index: 10;
+        display: none;
+    }
 
-        #cardscore {
-            position: absolute;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.6);
-            width: 100%;
-            z-index: 11;
-            display: none;
-            text-align: center;
-        }
+    #cardscore {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.74);
+        width: 100%;
+        z-index: 11;
+        display: none;
+        text-align: center;
+        padding-top: 10vh;
+        overflow: hidden;
+    }
 
-        .start-button button {
-                font-size: 0.9rem;
-                padding: 8px 15px;
-            }
-    </style>
-</head>
+    .start-button {
+        font-size: 0.9rem;
+    }
 
-<body>
+    .figure-score {
+        margin-top: -200px;
+        margin-left: -200px;
+    }
+    .btn-submit-img {
+        position: absolute;
+        left: 50%;
+        top: 85%;
+        /* margin-top: 200px;
+        margin-left: -200px; */
+    }
+</style>
+
+@section('content')
     <div id="cardinfo">
         <h1>BERHASIL</h1>
     </div>
     <div id="cardscore">
-        <h1>Score</h1>
+        <h1 style="color: gold;">CONGRATULATIONS!</h1>
+        <br>
+        <img src="images/mineral-memory/111.png" alt="" style="max-width: 100%;">
         <div class="start-button">
-            <button onclick=><a href="{{ route('landing.map')}}">Mengerti</a></button>
+        </div>
+        <div class="figure-score">
+            <img src="images/mineral-memory/15.png" alt="" style="max-width: 80%;">
+        </div>
+        <div class="btn-submit-img">
+            <img src="images/main/7.png" alt="" style="max-width: 150px;">
         </div>
     </div>
-    <div class="container">
-        <ul class="cards">
-            <li class="card">
-                <div class="view front-view"></div>
-                <div class="view back-view">
-                    <img src="/images/img-1.png" data-id="card-img-1" alt="Card Image">
-                </div>
-            </li>
-            <li class="card">
-                <div class="view front-view"></div>
-                <div class="view back-view">
-                    <img src="/images/img-2.png" data-id="card-img-2" alt="Card Image">
-                </div>
-            </li>
-            <li class="card">
-                <div class="view front-view"></div>
-                <div class="view back-view">
-                    <img src="/images/img-3.png" data-id="card-img-3" alt="Card Image">
-                </div>
-            </li>
-            <li class="card">
-                <div class="view front-view"></div>
-                <div class="view back-view">
-                    <img src="/images/img-4.png" data-id="card-img-4" alt="Card Image">
-                </div>
-            </li>
-            <li class="card">
-                <div class="view front-view"></div>
-                <div class="view back-view">
-                    <img src="/images/img-5.png" data-id="card-img-5" alt="Card Image">
-                </div>
-            </li>
-            <li class="card">
-                <div class="view front-view"></div>
-                <div class="view back-view">
-                    <img src="/images/img-6.png" data-id="card-img-6" alt="Card Image">
-                </div>
-            </li>
-            <li class="card">
-                <div class="view front-view"></div>
-                <div class="view back-view">
-                    <img src="/images/img-7.png" data-id="card-img-7" alt="Card Image">
-                </div>
-            </li>
-            <li class="card">
-                <div class="view front-view"></div>
-                <div class="view back-view">
-                    <img src="/images/img-8.png" data-id="card-img-8" alt="Card Image">
-                </div>
-            </li>
+    <ul class="cards" style="padding: 50px 15px;">
+        <li class="card">
+            <div class="view front-view">
+                <img src="/images/mineral-memory/39.png" alt="">
+            </div>
+            <div class="view back-view">
+                <img src="/images/img-1.png" class="img-memory" data-id="card-img-1" alt="Card Image">
+            </div>
+        </li>
+        <li class="card">
+            <div class="view front-view">
+                <img src="/images/mineral-memory/39.png" alt="">
+            </div>
+            <div class="view back-view">
+                <img src="/images/img-2.png" class="img-memory" data-id="card-img-2" alt="Card Image">
+            </div>
+        </li>
+        <li class="card">
+            <div class="view front-view">
+                <img src="/images/mineral-memory/39.png" alt="">
+            </div>
+            <div class="view back-view">
+                <img src="/images/img-3.png" class="img-memory" data-id="card-img-3" alt="Card Image">
+            </div>
+        </li>
+        <li class="card">
+            <div class="view front-view">
+                <img src="/images/mineral-memory/39.png" alt="">
+            </div>
+            <div class="view back-view">
+                <img src="/images/img-4.png" class="img-memory" data-id="card-img-4" alt="Card Image">
+            </div>
+        </li>
+        <li class="card">
+            <div class="view front-view">
+                <img src="/images/mineral-memory/39.png" alt="">
+            </div>
+            <div class="view back-view">
+                <img src="/images/img-5.png" class="img-memory" data-id="card-img-5" alt="Card Image">
+            </div>
+        </li>
+        <li class="card">
+            <div class="view front-view">
+                <img src="/images/mineral-memory/39.png" alt="">
+            </div>
+            <div class="view back-view">
+                <img src="/images/img-6.png" class="img-memory" data-id="card-img-6" alt="Card Image">
+            </div>
+        </li>
+        <li class="card">
+            <div class="view front-view">
+                <img src="/images/mineral-memory/39.png" alt="">
+            </div>
+            <div class="view back-view">
+                <img src="/images/img-7.png" class="img-memory" data-id="card-img-7" alt="Card Image">
+            </div>
+        </li>
+        <li class="card">
+            <div class="view front-view">
+                <img src="/images/mineral-memory/39.png" alt="">
+            </div>
+            <div class="view back-view">
+                <img src="/images/img-8.png" class="img-memory" data-id="card-img-8" alt="Card Image">
+            </div>
+        </li>
 
-            <li class="card">
-                <div class="view front-view"></div>
-                <div class="view back-view">
-                    <img class="pic" src="/images/img1.png" data-id="card-img-1" alt="Card Image">
-                </div>
-            </li>
-            <li class="card">
-                <div class="view front-view"></div>
-                <div class="view back-view">
-                    <img class="pic" src="/images/img2.png" data-id="card-img-2" alt="card-image">
-                </div>
-            </li>
-            <li class="card">
-                <div class="view front-view"></div>
-                <div class="view back-view">
-                    <img class="pic" src="/images/img3.png" data-id="card-img-3" alt="Card Image">
-                </div>
-            </li>
-            <li class="card">
-                <div class="view front-view"></div>
-                <div class="view back-view">
-                    <img class="pic" src="/images/img4.png" data-id="card-img-4" alt="Card Image">
-                </div>
-            </li>
-            <li class="card">
-                <div class="view front-view"></div>
-                <div class="view back-view">
-                    <img class="pic" src="/images/img5.png" data-id="card-img-5" alt="Card Image">
-                </div>
-            </li>
-            <li class="card">
-                <div class="view front-view"></div>
-                <div class="view back-view">
-                    <img class="pic" src="/images/img6.png" data-id="card-img-6" alt="Card Image">
-                </div>
-            </li>
-            <li class="card">
-                <div class="view front-view"></div>
-                <div class="view back-view">
-                    <img class="pic" src="/images/img7.png" data-id="card-img-7" alt="Card Image">
-                </div>
-            </li>
-            <li class="card">
-                <div class="view front-view"></div>
-                <div class="view back-view">
-                    <img class="pic" src="/images/img8.png" data-id="card-img-8" alt="Card Image">
-                </div>
-            </li>
-        </ul>
-    </div>
+        <li class="card">
+            <div class="view front-view">
+                <img src="/images/mineral-memory/39.png" alt="">
+            </div>
+            <div class="view back-view">
+                <img src="/images/img1.png" class="img-memory" data-id="card-img-1" alt="Card Image">
+            </div>
+        </li>
+        <li class="card">
+            <div class="view front-view">
+                <img src="/images/mineral-memory/39.png" alt="">
+            </div>
+            <div class="view back-view">
+                <img src="/images/img2.png" class="img-memory" data-id="card-img-2" alt="card-image">
+            </div>
+        </li>
+        <li class="card">
+            <div class="view front-view">
+                <img src="/images/mineral-memory/39.png" alt="">
+            </div>
+            <div class="view back-view">
+                <img src="/images/img3.png" class="img-memory" data-id="card-img-3" alt="Card Image">
+            </div>
+        </li>
+        <li class="card">
+            <div class="view front-view">
+                <img src="/images/mineral-memory/39.png" alt="">
+            </div>
+            <div class="view back-view">
+                <img src="/images/img4.png" class="img-memory" data-id="card-img-4" alt="Card Image">
+            </div>
+        </li>
+        <li class="card">
+            <div class="view front-view">
+                <img src="/images/mineral-memory/39.png" alt="">
+            </div>
+            <div class="view back-view">
+                <img src="/images/img5.png" class="img-memory" data-id="card-img-5" alt="Card Image">
+            </div>
+        </li>
+        <li class="card">
+            <div class="view front-view">
+                <img src="/images/mineral-memory/39.png" alt="">
+            </div>
+            <div class="view back-view">
+                <img src="/images/img6.png" class="img-memory" data-id="card-img-6" alt="Card Image">
+            </div>
+        </li>
+        <li class="card">
+            <div class="view front-view">
+                <img src="/images/mineral-memory/39.png" alt="">
+            </div>
+            <div class="view back-view">
+                <img src="/images/img7.png" class="img-memory" data-id="card-img-7" alt="Card Image">
+            </div>
+        </li>
+        <li class="card">
+            <div class="view front-view">
+                <img src="/images/mineral-memory/39.png" alt="">
+            </div>
+            <div class="view back-view">
+                <img src="/images/img8.png" class="img-memory" data-id="card-img-8" alt="Card Image">
+            </div>
+        </li>
+    </ul>
+@endsection
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="/js/card.js?v={{ \Str::uuid(); }}"></script>
-</body>
-
-</html>
+@push('scripts')
+    <script src="/js/card.js?v={{ \Str::uuid() }}"></script>
+    <script>
+        $(document).ready(function () {
+            $('.btn-submit-img').click(function () {
+                location.href = "{{ route('landing.map') }}"
+            })
+        })
+    </script>
+@endpush

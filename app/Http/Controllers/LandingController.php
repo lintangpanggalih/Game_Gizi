@@ -6,62 +6,56 @@ use Illuminate\Http\Request;
 
 class LandingController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        //
-        return view('index');
+        return view('app');
     }
 
     public function map()
     {
-        //
         return view('map');
     }
 
     public function card()
     {
-        //
         return view('card');
     }
 
     public function word()
     {
-        //
         return view('word');
     }
 
     public function quiz()
     {
-        //
         return view('quiz');
     }
 
     public function drag()
     {
-        //
         return view('drag');
     }
 
     public function biodata()
     {
-        //
         return view('biodata');
     }
-    
+
+    public function registration()
+    {
+        if (auth()->user()) {
+            return redirect()->route('landing.map');
+        }
+        return view('registration');
+    }
+
     public function cardrule()
     {
-        //
         return view('cardrule');
     }
 
     public function wordrule()
     {
-        //
         return view('wordrule');
     }
 
@@ -70,10 +64,7 @@ class LandingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-    }
+    public function create() {}
 
     /**
      * Store a newly created resource in storage.
@@ -81,10 +72,7 @@ class LandingController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
-    }
+    public function store(Request $request) {}
 
     /**
      * Display the specified resource.
@@ -92,10 +80,7 @@ class LandingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
+    public function show($id) {}
 
     /**
      * Show the form for editing the specified resource.
@@ -103,10 +88,7 @@ class LandingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        //
-    }
+    public function edit($id) {}
 
     /**
      * Update the specified resource in storage.
@@ -115,10 +97,7 @@ class LandingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+    public function update(Request $request, $id) {}
 
     /**
      * Remove the specified resource from storage.
@@ -126,8 +105,5 @@ class LandingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        //
-    }
+    public function destroy($id) {}
 }

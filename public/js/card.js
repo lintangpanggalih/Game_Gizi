@@ -29,18 +29,19 @@ function flipCard(e){
 
         disableDeck = true;
 
-        let cardOneImg = cardOne.querySelector('img').getAttribute('data-id'), 
-        cardTwoImg = cardTwo.querySelector('img').getAttribute('data-id'); 
+        
+        let cardOneImg = cardOne.querySelector('img.img-memory').getAttribute('data-id'), 
+        cardTwoImg = cardTwo.querySelector('img.img-memory').getAttribute('data-id'); 
+        // console.log(cardOne.querySelector('img.img-memory').getAttribute('data-id'), cardTwo.querySelector('img.img-memory').getAttribute('data-id'));
         matchCards(cardOneImg, cardTwoImg);
     }
 }
 
 function matchCards(img1, img2){ 
-    // console.log(img1, img2);
     
     if(img1 === img2){ // if two cards img matched
         matchedCard++; //increment matched value by one
-        $('#cardinfo').fadeIn()
+        // $('#cardinfo').fadeIn()
         // if(matchedCard == 8){ // if matched value is 8 that means user has matched all the cards
         //     $('#cardscore').fadeIn()
         //     // setTimeout(() => { 
@@ -52,6 +53,14 @@ function matchCards(img1, img2){
         cardOne.removeEventListener('click', flipCard);
         cardTwo.removeEventListener('click', flipCard);
         cardOne = cardTwo = '';//7.4
+        if(matchedCard == 8){ // if matched value is 8 that means user has matched all the cards
+            $('#cardscore').fadeIn()
+            console.log('PPPPPPP');
+            
+            // setTimeout(() => { 
+            //     return shuffleCard();
+            // }, 1200); //calling shuffleCard function after 1s
+        }
         return disableDeck = false;
     }
     else{

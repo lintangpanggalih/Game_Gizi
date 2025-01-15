@@ -2,6 +2,7 @@ const images = document.querySelectorAll('.image');
 const answers = document.querySelectorAll('.answer');
 var selectedImage = null;
 var selectedAnswer = null;
+var counter = 0;
 // Menambahkan event listener pada gambar untuk memilih gambar
 images.forEach(image => {
     image.addEventListener('click', (e) => {
@@ -61,15 +62,25 @@ function checkAllAnswers() {
     const imageId = selectedImage?.prop('id') ?? null;
     const answerId = selectedAnswer?.prop('id') ?? null;
 
-    console.log(imageId, answerId);
+    const srcImage = $('#' + imageId).prop('src');
+    const srcAnswer = $('#' + answerId).prop('src');
+    // console.log(imageId, answerId);
+    // console.log(srcImage, srcAnswer);
 
     if ((imageId + '-answer') == answerId) {
+        counter++
+        $('#' + imageId).prop('src', srcAnswer)
+        // $('#' + answerId).remove()
         selectedImage.addClass('correct');
         selectedAnswer.addClass('correct');
         $(selectedAnswer).css('background-color', 'green')
         $(selectedImage).css('background-color', 'green')
         result.textContent = 'Congratulations! You matched all images correctly!';
         result.style.color = 'green';
+
+        if (counter == 4) {
+            $('#cardscore').fadeIn()
+        }
     } else {
         result.textContent = 'Keep going! Try to match all images correctly.';
         result.style.color = 'orange';
