@@ -41,7 +41,7 @@
         background-color: rgba(0, 0, 0, 0.74);
         width: 100%;
         z-index: 11;
-        /* display: none; */
+        display: none;
         text-align: center;
         padding-top: 10vh;
         overflow: hidden;
