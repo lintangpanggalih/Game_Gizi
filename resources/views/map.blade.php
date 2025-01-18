@@ -93,31 +93,33 @@
     }
 </style>
 @section('content')
-    <div id="rule-board">
-        <img src="images/homepage/rule-title.png" alt="" width="300px">
-        <img src="images/homepage/rule-board.png" alt="" id="rule-board-img">
-    </div>
+    @if (!session('match-up'))
+        <div id="rule-board">
+            <img src="images/homepage/rule-title.png" alt="" width="300px">
+            <img src="images/homepage/rule-board.png" alt="" id="rule-board-img">
+        </div>
+    @endif
     <div id="map-wrapper" style="display: none;">
         <img id="treasure-map" src="images/homepage/9.png" alt="Peta Harta Karun">
         <div class="map-container">
             <button id="button1" class="map-button" onclick="showMessage('Petunjuk 1: Lihat ke arah pohon besar!')">
-                <a href="{{ route('landing.word') }}">
-                    <img src="images/gram-berry/22.png" alt="" width="100vw">
-                </a>
-            </button>
-            <button id="button2" class="map-button" onclick="showMessage('Petunjuk 2: Gali di dekat batu besar!')">                
                 <a href="{{ route('landing.quiz') }}">
                     <img src="images/quiz/18.png" alt="" width="100vw">
                 </a>
             </button>
+            <button id="button2" class="map-button" onclick="showMessage('Petunjuk 2: Gali di dekat batu besar!')">
+                <a href="{{ route('landing.word') }}">
+                    <img src="images/gram-berry/22.png" alt="" width="100vw">
+                </a>
+            </button>
             <button id="button3" class="map-button">
-                <a href="{{ route('landing.drag') }}">
-                    <img src="images/meat-match-up/20.png" alt="" width="100vw">
+                <a href="{{ route('landing.card') }}">
+                    <img src="images/mineral-memory/21.png" alt="" width="100vw">
                 </a>
             </button>
             <button id="button4" class="map-button" onclick=>
-                <a href="{{ route('landing.card') }}">
-                    <img src="images/mineral-memory/21.png" alt="" width="100vw">
+                <a href="{{ route('landing.drag') }}">
+                    <img src="images/meat-match-up/20.png" alt="" width="100vw">
                 </a>
             </button>
             {{-- <button id="button4" class="map-button" onclick=><a href="{{ route('landing.cardrule') }}">START NOW</a></button> --}}

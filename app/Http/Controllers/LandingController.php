@@ -36,6 +36,11 @@ class LandingController extends Controller
         return view('drag');
     }
 
+    public function drag2()
+    {
+        return view('drag2');
+    }
+
     public function biodata()
     {
         return view('biodata');

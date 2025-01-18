@@ -21,6 +21,7 @@ route::get('card', [LandingController::class, 'card'])->name('landing.card');
 route::get('quiz', [LandingController::class, 'quiz'])->name('landing.quiz');
 route::get('word', [LandingController::class, 'word'])->name('landing.word');
 route::get('drag', [LandingController::class, 'drag'])->name('landing.drag');
+route::get('drag2', [LandingController::class, 'drag2'])->name('landing.drag2');
 route::get('biodata', [LandingController::class, 'biodata'])->name('landing.biodata');
 route::get('registration', [LandingController::class, 'registration'])->name('landing.registration');
 route::get('cardrule', [LandingController::class, 'cardrule'])->name('landing.cardrule');

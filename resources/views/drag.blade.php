@@ -13,7 +13,6 @@
         margin-bottom: 10vh;
 
     }
-    
     #cardscore {
         position: absolute;
         top: 0%;
