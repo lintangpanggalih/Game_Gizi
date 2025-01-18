@@ -4,67 +4,67 @@
 @endsection
 <link rel="stylesheet" href="{{ asset('css/drag.css') }}">
 <style>
-    .container {
-        overflow-y: hidden;
-    }
-
     #draglogo {
         width: 20vh;
         margin-bottom: 10vh;
 
     }
-    #cardscore {
-        position: absolute;
-        top: 0%;
-        left: 0%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.74);
-        width: 100%;
-        z-index: 11;
-        display: none;
-        text-align: center;
-        padding-top: 10vh;
-        overflow: hidden;
+
+    .game-area {
+        display: flex;
+        gap: 20px;
     }
 
-    .start-button {
-        font-size: 0.9rem;
+    .draggable {
+        /* width: 50px;
+        height: 50px; */
+        background-color: #3498db;
+        border-radius: 5px;
+        cursor: grab;
+        touch-action: none;
+        /* Disable default gestures */
+        position: relative;
     }
 
-    .figure-score {
-        margin-top: -200px;
-        margin-left: -200px;
+    .draggable:active {
+        cursor: grabbing;
     }
-    .btn-submit-img {
-        position: absolute;
-        left: 50%;
-        top: 85%;
-        /* margin-top: 200px;
-        margin-left: -200px; */
+
+    .target {
+        box-shadow: inset 3px 3px 10px rgba(61, 61, 61, 0.3),
+            inset -13px -13px 30px rgba(255, 255, 255, 0.8);
+        border-style: groove;
+        align-items: center;
+        justify-content: center;
+        background-color: #b4b4b4;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .target.correct {
+        background-color: #2ecc71;
+        border-color: #27ae60;
+    }
+
+    .target.wrong {
+        background-color: #e74c3c;
+        border-color: #c0392b;
+    }
+
+    .scoreboard {
+        margin-top: 20px;
+        font-size: 20px;
     }
 </style>
 @section('content')
-    <div id="cardscore">
-        <h1 style="color: gold;">CONGRATULATIONS!</h1>
-        <br>
-        <img src="images/meat-match-up/110.png" alt="" style="max-width: 100%;">
-        <div class="start-button">
-        </div>
-        <div class="figure-score">
-            <img src="images/meat-match-up/14.png" alt="" style="max-width: 60%;">
-        </div>
-        <div class="btn-submit-img">
-            <img src="images/main/7.png" alt="" style="max-width: 150px;">
-        </div>
-    </div>
-    <!-- <h1>Match the Right Image</h1> -->
     <div style="text-align: right;">
         {{-- <img src="images/draglogo.png"> --}}
         <img src="images/draglogo.png" id="draglogo">
     </div>
+
     <div class="row m-0" style="width: 100%;">
         <div class="col images" style="padding-right: 0px;">
-            <!-- Gambar dengan format PNG -->
             <div>
                 <img src="images/drag1.png" alt="Drag1" class="image">
             </div>
@@ -78,46 +78,125 @@
                 <img src="images/drag4.png" alt="Drag4" class="image">
             </div>
         </div>
+
         <div class="col" style="padding-left: 0px;">
-            <div>
-                <img src="images/meat-match-up/box.png" alt="Drag4" class="image" id="drag1">
+            <div alt="Drag4" class="image target" id="target1" data-accept="draggable1">
+                {{-- <img src="images/drag-1.png"> --}}
             </div>
-            <div>
-                <img src="images/meat-match-up/box.png" alt="Drag4" class="image" id="drag2">
+            <div alt="Drag4" class="image target" id="target2" data-accept="draggable2">
             </div>
-            <div>
-                <img src="images/meat-match-up/box.png" alt="Drag4" class="image" id="drag3">
+            <div alt="Drag4" class="image target" id="target3" data-accept="draggable3">
             </div>
-            <div>
-                <img src="images/meat-match-up/box.png" alt="Drag4" class="image" id="drag4">
+            <div alt="Drag4" class="image target" id="target4" data-accept="draggable4">
             </div>
         </div>
+
         <div class="col answers" style="padding-right: 0px;">
             <div>
-                <img src="images/drag-1.png" id="drag1-answer" class="answer">
+                <img src="images/drag-1.png" id="draggable1" class="answer draggable" draggable="true" data-target="target1">
             </div>
             <div>
-                <img src="images/drag-2.png" id="drag2-answer" class="answer">
+                <img src="images/drag-2.png" id="draggable2" class="answer draggable" draggable="true" data-target="target2">
             </div>
             <div>
-                <img src="images/drag-3.png" id="drag3-answer" class="answer">
+                <img src="images/drag-3.png" id="draggable3" class="answer draggable" draggable="true" data-target="target3">
             </div>
             <div>
-                <img src="images/drag-4.png" id="drag4-answer" class="answer">
+                <img src="images/drag-4.png" id="draggable4" class="answer draggable" draggable="true" data-target="target4">
             </div>
         </div>
     </div>
-    <div id="result"></div>
-@endsection
+    {{-- <div class="game-area">
+        <div id="draggable1" class="draggable" draggable="true" data-target="target1"></div>
+        <div id="draggable2" class="draggable" draggable="true" data-target="target2"></div>
+    </div>
+    <div class="game-area">
+        <div id="target1" class="target" data-accept="draggable1">Target 1</div>
+        <div id="target2" class="target" data-accept="draggable2">Target 2</div>
+    </div> --}}
+    <div class="scoreboard">Score: <span id="score">0</span></div>
 
-@push('scripts')
-    <script src="/js/drag.js?v={{ \Str::uuid() }}"></script>
-    
     <script>
-        $(document).ready(function () {
-            $('.btn-submit-img').click(function () {
-                location.href = "{{ route('landing.map') }}"
-            })
-        })
+        const draggables = document.querySelectorAll('.draggable');
+        const targets = document.querySelectorAll('.target');
+        const scoreDisplay = document.getElementById('score');
+        let score = 0;
+
+        let activeElement = null;
+        let offsetX = 0;
+        let offsetY = 0;
+
+        const onDragStart = (e) => {
+            const event = e.touches ? e.touches[0] : e;
+            activeElement = e.target;
+
+            offsetX = event.clientX - activeElement.offsetLeft;
+            offsetY = event.clientY - activeElement.offsetTop;
+
+            activeElement.style.position = 'absolute';
+            activeElement.style.transition = 'none';
+        };
+
+        const onDrag = (e) => {
+            if (!activeElement) return;
+            const event = e.touches ? e.touches[0] : e;
+
+            activeElement.style.left = `${event.clientX - offsetX}px`;
+            activeElement.style.top = `${event.clientY - offsetY}px`;
+        };
+
+        const onDragEnd = (e) => {
+            if (!activeElement) return;
+
+            const draggable = activeElement;
+            activeElement = null;
+
+            targets.forEach((target) => {
+                const rect = target.getBoundingClientRect();
+                const draggableRect = draggable.getBoundingClientRect();
+
+                // Check collision
+                if (
+                    draggableRect.left < rect.right &&
+                    draggableRect.right > rect.left &&
+                    draggableRect.top < rect.bottom &&
+                    draggableRect.bottom > rect.top
+                ) {
+                    if (target.dataset.accept === draggable.id) {
+                        target.style.backgroundImage = `url(${draggable.src})`
+                        draggable.remove()
+                        target.classList.add('correct');
+                        score += 10;
+                    } else {
+                        target.classList.add('wrong');
+                        score -= 5;
+                    }
+                    // console.log(draggable);
+
+                    setTimeout(() => {
+                        target.classList.remove('correct', 'wrong');
+                    }, 500);
+
+                    // Reset draggable position
+                    draggable.style.left = '';
+                    draggable.style.top = '';
+                    scoreDisplay.textContent = score;
+                }
+            });
+        };
+
+        // Mouse Events
+        draggables.forEach((draggable) => {
+            draggable.addEventListener('mousedown', onDragStart);
+        });
+        window.addEventListener('mousemove', onDrag);
+        window.addEventListener('mouseup', onDragEnd);
+
+        // Touch Events
+        draggables.forEach((draggable) => {
+            draggable.addEventListener('touchstart', onDragStart);
+        });
+        window.addEventListener('touchmove', onDrag);
+        window.addEventListener('touchend', onDragEnd);
     </script>
-@endpush
+@endsection
