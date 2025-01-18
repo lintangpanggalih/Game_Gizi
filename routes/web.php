@@ -26,6 +26,7 @@ route::get('cardrule', [LandingController::class, 'cardrule'])->name('landing.ca
 route::get('wordrule', [LandingController::class, 'wordrule'])->name('landing.wordrule');
 route::get('dragrule', [LandingController::class, 'dragrule'])->name('landing.dragrule');
 route::resource('/', LandingController::class);
+Route::get('admin', [UserController::class, 'show']);
 
 Route::get('gamerule', function () {
     return view('gamerule');

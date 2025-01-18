@@ -27,5 +27,10 @@ class UserController extends Controller
 
         return redirect()->route('landing.map');
     }
+
+    public function show(){
+        $userdata = User::all();
+        return view('admin', ['users'=>$userdata]);
+    }
 }
 
