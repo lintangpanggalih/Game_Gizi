@@ -16,9 +16,10 @@
     }
 
     .draggable {
-        /* width: 50px;
-        height: 50px; */
-        background-color: #3498db;
+        width: auto;
+        height: 70px;
+        /* aspect-ratio: 1/1; */
+        cursor: pointer;
         border-radius: 5px;
         cursor: grab;
         touch-action: none;
@@ -59,7 +60,6 @@
 </style>
 @section('content')
     <div style="text-align: right;">
-        {{-- <img src="images/draglogo.png"> --}}
         <img src="images/draglogo.png" id="draglogo">
     </div>
 
@@ -81,7 +81,6 @@
 
         <div class="col" style="padding-left: 0px;">
             <div alt="Drag4" class="image target" id="target1" data-accept="draggable1">
-                {{-- <img src="images/drag-1.png"> --}}
             </div>
             <div alt="Drag4" class="image target" id="target2" data-accept="draggable2">
             </div>
@@ -91,30 +90,24 @@
             </div>
         </div>
 
-        <div class="col answers" style="padding-right: 0px;">
-            <div>
-                <img src="images/drag-1.png" id="draggable1" class="answer draggable" draggable="true" data-target="target1">
+        <div class="col answers" style="position:relative;padding-right: 0px;">
+            <div style="position: absolute;">
+                <img src="images/meat-match-up/101.png" id="draggable1" class="answer draggable" draggable="true" data-target="target1">
             </div>
-            <div>
-                <img src="images/drag-2.png" id="draggable2" class="answer draggable" draggable="true" data-target="target2">
+            <div style="position: absolute;top:80px;">
+                <img src="images/meat-match-up/100.png" id="draggable2" class="answer draggable" draggable="true" data-target="target2">
             </div>
-            <div>
-                <img src="images/drag-3.png" id="draggable3" class="answer draggable" draggable="true" data-target="target3">
+            <div style="position: absolute;top:160px;">
+                <img src="images/meat-match-up/97.png" id="draggable3" class="answer draggable" draggable="true" data-target="target3">
             </div>
-            <div>
-                <img src="images/drag-4.png" id="draggable4" class="answer draggable" draggable="true" data-target="target4">
+            <div style="position: absolute;top:240px;">
+                <img src="images/meat-match-up/98.png" id="draggable4" class="answer draggable" draggable="true" data-target="target4">
+            </div>
+            <div style="position: absolute;top:320px;">
+                <img src="images/meat-match-up/99.png" id="draggable5" class="answer draggable" draggable="true" data-target="target5">
             </div>
         </div>
     </div>
-    {{-- <div class="game-area">
-        <div id="draggable1" class="draggable" draggable="true" data-target="target1"></div>
-        <div id="draggable2" class="draggable" draggable="true" data-target="target2"></div>
-    </div>
-    <div class="game-area">
-        <div id="target1" class="target" data-accept="draggable1">Target 1</div>
-        <div id="target2" class="target" data-accept="draggable2">Target 2</div>
-    </div> --}}
-    <div class="scoreboard">Score: <span id="score">0</span></div>
 
     <script>
         const draggables = document.querySelectorAll('.draggable');

@@ -11,17 +11,6 @@
     background-color: red;
 }
 
-.answer {
-    width: 70px;
-    height: 70px;
-    cursor: pointer;
-}
-
-.answer:hover {
-    background-color: #e0e0e0;
-}
-
-
 #result {
     margin-top: 20px;
     font-size: 20px;
