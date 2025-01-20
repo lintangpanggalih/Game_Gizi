@@ -5,10 +5,10 @@ let matchedCard = 0;
 
 $('#cardinfo').on('click', function () {
     $(this).fadeOut()
-    console.log(matchedCard);
+
     if(matchedCard == 8){ // if matched value is 8 that means user has matched all the cards
         $('#cardscore').fadeIn()
-        console.log('PPPPPPP');
+
         
         // setTimeout(() => { 
         //     return shuffleCard();
@@ -32,7 +32,7 @@ function flipCard(e){
         
         let cardOneImg = cardOne.querySelector('img.img-memory').getAttribute('data-id'), 
         cardTwoImg = cardTwo.querySelector('img.img-memory').getAttribute('data-id'); 
-        // console.log(cardOne.querySelector('img.img-memory').getAttribute('data-id'), cardTwo.querySelector('img.img-memory').getAttribute('data-id'));
+
         matchCards(cardOneImg, cardTwoImg);
     }
 }
@@ -48,20 +48,32 @@ function matchCards(img1, img2){
         //     //     return shuffleCard();
         //     // }, 1200); //calling shuffleCard function after 1s
         // }
+    
+        setTimeout(() => { // if two card not matched
+            cardOne.classList.add('beat');
+            cardTwo.classList.add('beat');
+            // cardOne = cardTwo = '';//setting both card value to blank
+        }, 400);
+        
+        setTimeout(() => { // removing both shake and flip classes from the both card after 1.2s
+            cardOne = cardTwo = '';//setting both card value to blank
+            disableDeck = false;
 
-        // console.log(matchedCard);
+        }, 1000);
         cardOne.removeEventListener('click', flipCard);
         cardTwo.removeEventListener('click', flipCard);
-        cardOne = cardTwo = '';//7.4
+        // cardOne.classList.remove('shake', 'flip');
+        // cardTwo.classList.remove('shake', 'flip');
+
         if(matchedCard == 8){ // if matched value is 8 that means user has matched all the cards
             $('#cardscore').fadeIn()
-            console.log('PPPPPPP');
             
             // setTimeout(() => { 
             //     return shuffleCard();
-            // }, 1200); //calling shuffleCard function after 1s
+            // }, 1000); //calling shuffleCard function after 1s
         }
-        return disableDeck = false;
+
+        // return disableDeck = false;
     }
     else{
         setTimeout(() => { // if two card not matched

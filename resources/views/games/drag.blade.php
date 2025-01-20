@@ -1,15 +1,9 @@
-@extends('wrapper')
+@extends('games.wrapper')
 @section('title')
-    Home
+    Meat Match Up
 @endsection
 <link rel="stylesheet" href="{{ asset('css/drag.css') }}">
 <style>
-    #draglogo {
-        width: 20vh;
-        margin-bottom: 10vh;
-
-    }
-
     .game-area {
         display: flex;
         gap: 20px;
@@ -58,7 +52,20 @@
         font-size: 20px;
     }
 </style>
-@section('content')
+@section('game-content')
+    <div id="cardscore">
+        <h1 style="color: gold;">CONGRATULATIONS!</h1>
+        <br>
+        <img src="images/meat-match-up/110.png" alt="" style="max-width: 100%;">
+        <div class="start-button">
+        </div>
+        <div class="figure-score">
+            <img src="images/meat-match-up/14.png" alt="">
+            <div class="btn-submit-img">
+                <img src="images/main/7.png" alt="" style="max-width: 150px;">
+            </div>
+        </div>
+    </div>
     <div style="text-align: right;">
         <img src="images/draglogo.png" id="draglogo">
     </div>
@@ -80,41 +87,42 @@
         </div>
 
         <div class="col" style="padding-left: 0px;">
-            <div alt="Drag4" class="image target" id="target1" data-accept="draggable1">
+            <div alt="Drag4" class="image target" data-index="1" id="target1" data-accept="draggable1">
             </div>
-            <div alt="Drag4" class="image target" id="target2" data-accept="draggable2">
+            <div alt="Drag4" class="image target" data-index="2" id="target2" data-accept="draggable2">
             </div>
-            <div alt="Drag4" class="image target" id="target3" data-accept="draggable3">
+            <div alt="Drag4" class="image target" data-index="3" id="target3" data-accept="draggable3">
             </div>
-            <div alt="Drag4" class="image target" id="target4" data-accept="draggable4">
+            <div alt="Drag4" class="image target" data-index="4" id="target4" data-accept="draggable4">
             </div>
         </div>
 
         <div class="col answers" style="position:relative;padding-right: 0px;">
             <div style="position: absolute;">
-                <img src="images/meat-match-up/101.png" id="draggable1" class="answer draggable" draggable="true" data-target="target1">
+                <img src="images/meat-match-up/101.png" data-index="1" id="draggable1" class="answer draggable" draggable="true" data-target="target1">
             </div>
             <div style="position: absolute;top:80px;">
-                <img src="images/meat-match-up/100.png" id="draggable2" class="answer draggable" draggable="true" data-target="target2">
+                <img src="images/meat-match-up/100.png" data-index="2" id="draggable2" class="answer draggable" draggable="true" data-target="target2">
             </div>
             <div style="position: absolute;top:160px;">
-                <img src="images/meat-match-up/97.png" id="draggable3" class="answer draggable" draggable="true" data-target="target3">
+                <img src="images/meat-match-up/102.png" data-index="3" id="draggable3" class="answer draggable" draggable="true" data-target="target3">
             </div>
             <div style="position: absolute;top:240px;">
-                <img src="images/meat-match-up/98.png" id="draggable4" class="answer draggable" draggable="true" data-target="target4">
+                <img src="images/meat-match-up/98.png" data-index="4" id="draggable4" class="answer draggable" draggable="true" data-target="target4">
             </div>
             <div style="position: absolute;top:320px;">
-                <img src="images/meat-match-up/99.png" id="draggable5" class="answer draggable" draggable="true" data-target="target5">
+                <img src="images/meat-match-up/99.png" data-index="5" id="draggable5" class="answer draggable" draggable="true" data-target="target5">
             </div>
         </div>
     </div>
-
+    <div class="row scoring"></div>
+@endsection
+@push('scripts')
     <script>
         const draggables = document.querySelectorAll('.draggable');
         const targets = document.querySelectorAll('.target');
-        const scoreDisplay = document.getElementById('score');
-        let score = 0;
 
+        let score = 0;
         let activeElement = null;
         let offsetX = 0;
         let offsetY = 0;
@@ -159,12 +167,15 @@
                         target.style.backgroundImage = `url(${draggable.src})`
                         draggable.remove()
                         target.classList.add('correct');
-                        score += 10;
+
+                        // scoring
+                        const dataIndex = target.dataset.index
+                        $('#scoring' + dataIndex).find('img').prop('src', 'images/meat-match-up/44.png')
+
+                        score += 1;
                     } else {
                         target.classList.add('wrong');
-                        score -= 5;
                     }
-                    // console.log(draggable);
 
                     setTimeout(() => {
                         target.classList.remove('correct', 'wrong');
@@ -173,9 +184,9 @@
                     // Reset draggable position
                     draggable.style.left = '';
                     draggable.style.top = '';
-                    scoreDisplay.textContent = score;
-                }
-            });
+
+                }            });
+            checkScore(score)
         };
 
         // Mouse Events
@@ -191,5 +202,22 @@
         });
         window.addEventListener('touchmove', onDrag);
         window.addEventListener('touchend', onDragEnd);
+
+        function checkScore(score) {
+            if (score == 4) {
+                $('#cardscore').fadeIn()
+            }
+        }
     </script>
-@endsection
+    <script>
+        $(document).ready(function() {
+            const targetEl = $('.target');
+            let scoreEl = ''
+            for (let i = 1; i <= targetEl.length; i++) {
+                scoreEl += `<div class="col" id="scoring${i}"><img src="images/meat-match-up/38.png" width="50px"></div>`
+            }
+
+            $('.scoring').html(scoreEl)
+        })
+    </script>
+@endpush

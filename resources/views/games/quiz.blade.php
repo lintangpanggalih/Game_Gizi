@@ -1,4 +1,4 @@
-@extends('wrapper')
+@extends('games.wrapper')
 @section('title')
     Home
 @endsection
@@ -27,36 +27,8 @@
         /* Shrinks the button slightly */
     }
 
-    #cardscore, 
-    #cardwrong {
-        position: absolute;
-        top: 0%;
-        left: 0%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.74);
-        width: 100%;
-        z-index: 11;
-        display: none;
-        text-align: center;
-        padding-top: 10vh;
-        overflow: hidden;
-    }
-
     .start-button {
         font-size: 0.9rem;
-    }
-
-    .figure-score {
-        margin-top: -120%;
-        /* margin-left: -200px; */
-    }
-
-    .btn-submit-img {
-        position: absolute;
-        left: 50%;
-        top: 85%;
-        /* margin-top: 200px;
-        margin-left: -200px; */
     }
 </style>
 @section('content')
@@ -67,21 +39,17 @@
         <div class="start-button">
         </div>
         <div class="figure-score">
-            <img src="images/quiz/24.png" alt="" style="max-width: 60%;">
-        </div>
-        <div class="btn-submit-img">
-            <img src="images/main/7.png" alt="" style="max-width: 150px;">
+            <img src="images/quiz/24.png" alt="">
+            <div class="btn-submit-img">
+                <img src="images/main/7.png" alt="" style="max-width: 150px;">
+            </div>
         </div>
     </div>
     <div id="cardwrong">
-        <h1 style="color: rgb(240, 67, 67);">OOPS, TRY AGAIN!</h1>
-        <br>
-        <img src="images/quiz/121.png" alt="" style="max-width: 70%;margin-top: 200px;">
-        <div class="start-button">
+        <div class="figure-wrong">
+            <img src="images/quiz/120.png" alt="">
         </div>
-        <div class="figure-score">
-            <img src="images/quiz/120.png" alt="" style="max-width: 60%;">
-        </div>
+        <img src="images/quiz/121.png" alt="" style="max-width: 250px;margin-top: -50px;">
     </div>
     <h1>Quiz Anak Cerdas</h1>
     <div class="quiz-container">
@@ -106,11 +74,8 @@
 @push('scripts')
     <script src="/js/quiz.js?v={{ \Str::uuid() }}"></script>
     <script>
-        $(document).ready(function () {
-            $('.btn-submit-img').click(function () {
-                location.href = "{{ route('landing.map') }}"
-            })
-            $('#cardwrong').click(function () {
+        $(document).ready(function() {
+            $('#cardwrong').click(function() {
                 $("#cardwrong").fadeOut()
             })
         })

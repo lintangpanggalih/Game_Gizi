@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
         crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
-    <title>You Are What You Eat - Mobile</title>
+    <title>@yield('title') - You Are What You Eat</title>
     <style>
         @font-face {
             font-family: "Core Narae";
@@ -44,7 +45,7 @@
 
         body {
             font-family: 'Core Narae', 'Core Narae Bold', Arial, Helvetica, sans-serif;
-            background-color: #b8b8b8;
+            background-color: #e6e6e6;
             text-align: center;
             line-height: 1.5;
             padding: 0cm !important;
@@ -53,6 +54,7 @@
         }
 
         .container {
+            position: relative;
             margin: 0;
             padding: 0cm;
             height: 100vh;
