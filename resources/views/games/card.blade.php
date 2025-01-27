@@ -40,7 +40,7 @@
     <div style="text-align: right;">
         <img src="images/mineral-memory/27.png" id="draglogo">
     </div>
-    <div class="cards">
+    <div class="cards" id="cards-container">
         <div class="card">
             <div class="view front-view">
                 <img src="/images/mineral-memory/39.png" alt="">
