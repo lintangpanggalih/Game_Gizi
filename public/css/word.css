@@ -1,15 +1,5 @@
-/* General styles */
-body {
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-  background-color: #fce4ec;
-  color: #6a1b9a;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
 header {
-  background-color: #ec407a;
+  background-color: #8b8b8b;
   color: white;
   padding: 1em 0;
 }
@@ -35,7 +25,6 @@ main {
   width: 80%;
   max-width: 300px;
   height: auto;
-  border: 5px solid #ec407a;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -57,15 +46,23 @@ main {
 .letter-button {
   font-size: 1.2em;
   padding: 0.4em 0.6em;
-  background-color: #d81b60;
+  background-color: #afafaf;
+  box-shadow: inset 3px 3px 6px rgba(61, 61, 61, 0.3),
+    /* Inner dark shadow */
+    inset -3px -3px 6px rgba(255, 255, 255, 0.8);
   color: white;
   border: none;
+  border-style: groove;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .letter-button:hover {
-  background-color: #ad1457;
+  background-color: #25b800;
+}
+
+.letter-button:active {
+  transform: scale(0.95);
 }
 
 #input-container {
