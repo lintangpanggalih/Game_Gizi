@@ -103,10 +103,10 @@ function checkAnswer(selected) {
     if (selected === correct) {
         score++;
     } else {
-      // console.log('salah', $("#cardwrong"), $("#cardscore"));
-      
-      $("#cardwrong").fadeIn();
-      return false
+        // console.log('salah', $("#cardwrong"), $("#cardscore"));
+
+        $("#cardwrong").fadeIn();
+        return false;
     }
 
     currentQuestion++;
@@ -119,14 +119,22 @@ function checkAnswer(selected) {
 
 function showResult() {
     $("#question-board").fadeOut(1000);
-    $(questionEl).fadeOut(1000)
-    $(optionsEl).fadeOut(1000)
+    $(questionEl).fadeOut(1000);
+    $(optionsEl).fadeOut(1000);
     // resultEl.textContent = `Kamu menjawab ${score} dari ${questions.length} pertanyaan dengan benar!`;
     // nextBtn.style.display = "inline-block";
 
     setTimeout(() => {
-        $("#cardscore").fadeIn();
-    }, 1000);
+        // $("#cardscore").fadeIn();
+
+        $("#cardresult").fadeIn();
+        setTimeout(() => {
+            $("#cardresult")
+                .find("img:nth(0)")
+                .css("visibility", "visible")
+                .css("opacity", "1");
+        }, 1000);
+    }, 700);
 }
 
 // function restartQuiz() {

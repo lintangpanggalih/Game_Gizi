@@ -6,6 +6,7 @@
 
     }
 
+    #cardresult,
     #cardwrong,
     #cardscore {
         position: absolute;
@@ -21,6 +22,16 @@
         overflow: hidden;
     }
 
+    #cardresult {
+        background-color: rgba(128, 36, 0, 0.849);
+    }
+
+    #cardresult>img {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s linear;
+    }
+
     #cardwrong {
         display: none;
     }
@@ -33,6 +44,15 @@
         max-width: 250px;
     }
 
+    .figure-result {
+        position: relative;
+        /* margin-top: -10rem;
+        margin-left: -10rem; */
+    }
+
+    .figure-result img {
+        height: 15rem;
+    }
     .figure-score {
         position: relative;
         margin-top: -10rem;

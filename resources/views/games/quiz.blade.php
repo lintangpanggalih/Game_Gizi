@@ -45,13 +45,26 @@
             </div>
         </div>
     </div>
+    <div id="cardresult">
+        <h1 style="color: gold;">CONGRATULATIONS!</h1>
+        <br>
+        <img src="images/quiz/124.png" alt="" style="max-width: 100%;">
+        <div class="start-button">
+        </div>
+        <div class="figure-result">
+            <img src="images/quiz/chest-opening-1-loop.gif" alt="">
+        </div>
+    </div>
     <div id="cardwrong">
         <div class="figure-wrong">
             <img src="images/quiz/120.png" alt="">
         </div>
         <img src="images/quiz/121.png" alt="" style="max-width: 250px;margin-top: -50px;">
     </div>
-    <h1>Quiz Anak Cerdas</h1>
+    
+    <div style="text-align: right;">
+        <img src="images/mineral-memory/27.png" id="draglogo">
+    </div>
     <div class="quiz-container">
         <div id="quiz">
             <div id="question-board">
