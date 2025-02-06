@@ -90,6 +90,7 @@
             box-shadow: none !important;
         }
 
+        .btn-start-img,
         .btn-submit-img {
             cursor: pointer;
             width: fit-content;
@@ -98,6 +99,7 @@
             background-color: transparent;
         }
 
+        .btn-start-img:active img,
         .btn-submit-img:active img {
             transform: scale(0.95);
         }

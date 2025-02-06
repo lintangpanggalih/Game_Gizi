@@ -63,14 +63,14 @@
     </div>
     
     <div style="text-align: right;">
-        <img src="images/mineral-memory/27.png" id="draglogo">
+        <img src="images/quiz/30.png" id="draglogo">
     </div>
     <div class="quiz-container">
         <div id="quiz">
             <div id="question-board">
                 <p class="question" id="question"></p>
             </div>
-            <div class="row" id="options">
+            <div class="row m-0" id="options">
                 <div class="col">
                     <button id="btn-true" value="True"></button>
                 </div>

@@ -1,11 +1,12 @@
 @extends('wrapper')
 <style>
+    .draglogo,
     #draglogo {
         width: 20vh;
         margin-bottom: 5vh;
-
     }
 
+    #cardinstruction,
     #cardresult,
     #cardwrong,
     #cardscore {
@@ -32,8 +33,26 @@
         transition: visibility 0s, opacity 0.5s linear;
     }
 
-    #cardwrong {
-        display: none;
+    #cardinstruction {
+        display: block;
+        padding-top: 0px;
+        background: linear-gradient(0deg, rgba(255, 217, 0, 0.164), rgba(168, 143, 0, 0.1)), url("{{ asset('images/main/main-bg.png') }}");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #cardinstruction #instruction-board {
+        width: 100%;
+        min-height: 200px;
+        font-size: 1.2em;
+        box-sizing: border-box;
+        overflow-wrap: break-word;
+        background-image: url("/images/basic/question-board.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 40px 10px;
     }
 
     .figure-wrong {
@@ -53,6 +72,20 @@
     .figure-result img {
         height: 15rem;
     }
+
+    .figure-instruction {
+        position: relative;
+        text-align: right;
+    }
+
+    .figure-instruction img {
+        height: 20rem;
+    }
+
+    .btn-start-img {
+        margin-left: 5vh;
+    }
+
     .figure-score {
         position: relative;
         margin-top: -10rem;
@@ -61,6 +94,10 @@
 
     .figure-score img {
         height: 20rem;
+    }
+
+    .btn-start-img {
+        margin-left: 5vh;
     }
 
     .btn-submit-img {
@@ -92,6 +129,13 @@
         $(document).ready(function() {
             $('.btn-submit-img').click(function() {
                 location.href = "{{ route('landing.map') }}"
+            })
+
+            $(".btn-start-img").click(function(e) {
+                $('#cardinstruction').slideUp();
+                setTimeout(() => {
+                    $('#map-wrapper').fadeIn(500);
+                }, 1000);
             })
         })
     </script>

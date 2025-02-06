@@ -28,6 +28,21 @@
     }
 </style>
 @section('content')
+    <div id="cardinstruction">
+        <div style="text-align: right;">
+            <img src="images/gram-berry/112.png" class="draglogo" style="max-width: 100%;">
+        </div>
+        <br>
+        <div id="instruction-board">
+            Tulis deskripsi dari gambar yang muncul, hafalkan karena merupakan petunjuk untuk permainan selanjutnya.
+        </div>
+        <div class="btn-start-img">
+            <img src="images/start.png" alt="" style="max-width: 150px;">
+        </div>
+        <div class="figure-instruction">
+            <img src="images/gram-berry/22.png" alt="">
+        </div>
+    </div>
     <div id="cardscore">
         <h1 style="color: gold;">CONGRATULATIONS!</h1>
         <br>

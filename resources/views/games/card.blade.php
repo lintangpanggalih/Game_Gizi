@@ -5,23 +5,26 @@
 
 <link rel="stylesheet" href="{{ asset('css/card.css') }}">
 <style>
-    #cardinfo {
-        position: absolute;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.6);
-        width: 100%;
-        z-index: 10;
-        display: none;
-    }
-
     .start-button {
         font-size: 0.9rem;
     }
 </style>
 
 @section('content')
-    <div id="cardinfo">
-        <h1>BERHASIL</h1>
+    <div id="cardinstruction">
+        <div style="text-align: right;">
+            <img src="images/mineral-memory/27.png" class="draglogo" style="max-width: 100%;">
+        </div>
+        <br>
+        <div id="instruction-board">
+            Temukan pasangan deskripsi yang tepat dari setiap kotak yang berisi gambar. hafalkan karena merupakan petunjuk untuk permainan selanjutnya.
+        </div>
+        <div class="btn-start-img">
+            <img src="images/start.png" alt="" style="max-width: 150px;">
+        </div>
+        <div class="figure-instruction">
+            <img src="images/mineral-memory/15.png" alt="">
+        </div>
     </div>
     <div id="cardscore">
         <h1 style="color: gold;">CONGRATULATIONS!</h1>
@@ -36,7 +39,7 @@
             </div>
         </div>
     </div>
-    
+
     <div style="text-align: right;">
         <img src="images/mineral-memory/27.png" id="draglogo">
     </div>
