@@ -50,7 +50,7 @@
             line-height: 1.5;
             padding: 0cm !important;
             box-sizing: border-box;
-            /* overflow-y: scroll; */
+            overflow-y: scroll;
         }
 
         .container {

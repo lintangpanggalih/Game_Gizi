@@ -7,6 +7,7 @@
     }
 
     #cardinstruction,
+    #cardinfo,
     #cardresult,
     #cardwrong,
     #cardscore {
@@ -79,7 +80,7 @@
     }
 
     .figure-instruction img {
-        height: 20rem;
+        height: 10rem;
     }
 
     .btn-start-img {
@@ -127,6 +128,10 @@
 @push('scripts')
     <script>
         $(document).ready(function() {
+            $('#cardinfo').click(function() {
+                $(this).fadeOut()
+            })
+
             $('.btn-submit-img').click(function() {
                 location.href = "{{ route('landing.map') }}"
             })

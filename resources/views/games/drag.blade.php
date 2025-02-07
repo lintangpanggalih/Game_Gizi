@@ -53,6 +53,14 @@
     }
 </style>
 @section('game-content')
+    <div id="cardinfo">
+        <h1 style="color: gold;">CONGRATULATIONS!</h1>
+        <br>
+        <img class="info-img" style="max-width: 100%;">
+        <div class="figure-result">
+            <img src="images/meat-match-up/14.png" alt="">
+        </div>
+    </div>
     <div id="cardinstruction">
         <div style="text-align: right;">
             <img src="images/draglogo.png" class="draglogo" style="max-width: 100%;">
@@ -64,9 +72,9 @@
         <div class="btn-start-img">
             <img src="images/start.png" alt="" style="max-width: 150px;">
         </div>
-        <div class="figure-instruction">
+        {{-- <div class="figure-instruction">
             <img src="images/meat-match-up/14.png" alt="">
-        </div>
+        </div> --}}
     </div>
     <div id="cardscore">
         <h1 style="color: gold;">CONGRATULATIONS!</h1>
@@ -114,19 +122,19 @@
 
         <div class="col answers" style="position:relative;padding-right: 0px;">
             <div style="position: absolute;">
-                <img src="images/meat-match-up/101.png" data-index="1" id="draggable1" class="answer draggable" draggable="true" data-target="target1">
+                <img src="images/meat-match-up/101.png" data-index="1" id="draggable1" class="answer draggable" draggable="true" data-target="target1" data-src="images/meat-match-up/159.png">
             </div>
             <div style="position: absolute;top:80px;">
-                <img src="images/meat-match-up/100.png" data-index="2" id="draggable2" class="answer draggable" draggable="true" data-target="target2">
+                <img src="images/meat-match-up/99.png" data-index="2" id="draggable2" class="answer draggable" draggable="true" data-target="target2" data-src="images/meat-match-up/160.png">
             </div>
             <div style="position: absolute;top:160px;">
-                <img src="images/meat-match-up/102.png" data-index="3" id="draggable3" class="answer draggable" draggable="true" data-target="target3">
+                <img src="images/meat-match-up/102.png" data-index="3" id="draggable3" class="answer draggable" draggable="true" data-target="target3" data-src="images/meat-match-up/157.png">
             </div>
             <div style="position: absolute;top:240px;">
-                <img src="images/meat-match-up/98.png" data-index="4" id="draggable4" class="answer draggable" draggable="true" data-target="target4">
+                <img src="images/meat-match-up/98.png" data-index="4" id="draggable4" class="answer draggable" draggable="true" data-target="target4" data-src="images/meat-match-up/158.png">
             </div>
             <div style="position: absolute;top:320px;">
-                <img src="images/meat-match-up/99.png" data-index="5" id="draggable5" class="answer draggable" draggable="true" data-target="target5">
+                <img src="images/meat-match-up/100.png" data-index="5" id="draggable5" class="answer draggable" draggable="true" data-target="target5" data-src="images/meat-match-up/157.png">
             </div>
         </div>
     </div>
@@ -188,6 +196,11 @@
                         $('#scoring' + dataIndex).find('img').prop('src', 'images/meat-match-up/44.png')
 
                         score += 1;
+
+                        // console.log(draggable.dataset.src);
+                        
+                        $('#cardinfo').find('.info-img').prop('src', draggable.dataset.src)
+                        $('#cardinfo').fadeIn(500)
                     } else {
                         target.classList.add('wrong');
                     }
@@ -221,7 +234,9 @@
 
         function checkScore(score) {
             if (score == 4) {
-                $('#cardscore').fadeIn()
+                $('#cardinfo').click(function () {
+                    $('#cardscore').fadeIn()
+                })
             }
         }
     </script>

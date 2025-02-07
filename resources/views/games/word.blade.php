@@ -39,9 +39,9 @@
         <div class="btn-start-img">
             <img src="images/start.png" alt="" style="max-width: 150px;">
         </div>
-        <div class="figure-instruction">
+        {{-- <div class="figure-instruction">
             <img src="images/gram-berry/22.png" alt="">
-        </div>
+        </div> --}}
     </div>
     <div id="cardscore">
         <h1 style="color: gold;">CONGRATULATIONS!</h1>
@@ -66,9 +66,10 @@
             <div id="image-container">
                 <img id="game-image" src="images/karbohidrat.png" alt="Gambar yang harus ditebak">
             </div>
+            <div id="letters-field"></div>
             <div id="letters-container"></div>
             <div id="input-container">
-                <p id="guess-word"></p>
+                <p id="guess-word" class="d-none"></p>
                 <button id="reset-button">Reset</button>
             </div>
         </section>
