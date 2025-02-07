@@ -13,7 +13,13 @@ class LandingController extends Controller
 
     public function map()
     {
-        return view('games.map');
+        $stages = session()->get('game-stages');
+        if(empty($stages)) {
+            session()->put('game-stages', GameController::$stages);
+            // return 'game is not started';
+        }
+
+        return view('games.map', compact('stages'));
     }
 
     public function card()

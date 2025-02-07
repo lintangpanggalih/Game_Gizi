@@ -236,6 +236,21 @@
             if (score == 4) {
                 $('#cardinfo').click(function () {
                     $('#cardscore').fadeIn()
+                });
+
+                $.ajax({
+                    url: "{{ route('game.save-session') }}",
+                    type: 'PUT',
+                    data: {
+                        score: score,
+                        stage: 'meat-match-up'
+                    },
+                    success: function(response) {
+                        console.log(response);
+                    },
+                    error: function(response) {
+                        console.log(response);
+                    },
                 })
             }
         }

@@ -3,18 +3,6 @@ let cardOne, cardTwo;
 let disableDeck = false;
 let matchedCard = 0;
 
-$("#cardinfo").on("click", function () {
-    $(this).fadeOut();
-
-    if (matchedCard == 16) {
-        // if matched value is 8 that means user has matched all the cards
-        $("#cardscore").fadeIn();
-
-        // setTimeout(() => {
-        //     return shuffleCard();
-        // }, 1200); //calling shuffleCard function after 1s
-    }
-});
 function flipCard(e) {
     let clickedCard = e.target; //getting user clicked card
 
@@ -41,21 +29,16 @@ function matchCards(img1, img2) {
 
     let sameType = false;
     if (
-        (img1.classList.contains("food") && img2.classList.contains("food")) || (img1.classList.contains("description") && img2.classList.contains("description"))
+        (img1.classList.contains("food") && img2.classList.contains("food")) ||
+        (img1.classList.contains("description") &&
+            img2.classList.contains("description"))
     ) {
-        sameType = true
+        sameType = true;
     }
 
     if (target_img1 === target_img2 && !sameType) {
         // if two cards img matched
         matchedCard++; //increment matched value by one
-        // $('#cardinfo').fadeIn()
-        // if(matchedCard == 16){ // if matched value is 8 that means user has matched all the cards
-        //     $('#cardscore').fadeIn()
-        //     // setTimeout(() => {
-        //     //     return shuffleCard();
-        //     // }, 1200); //calling shuffleCard function after 1s
-        // }
 
         setTimeout(() => {
             // if two card not matched
@@ -81,6 +64,21 @@ function matchCards(img1, img2) {
             // setTimeout(() => {
             //     return shuffleCard();
             // }, 1000); //calling shuffleCard function after 1s
+
+            $.ajax({
+                url: "{{ route('game.save-session') }}",
+                type: "PUT",
+                data: {
+                    score: matchedCard,
+                    stage: "mineral-memory",
+                },
+                success: function (response) {
+                    console.log(response);
+                },
+                error: function (response) {
+                    console.log(response);
+                },
+            });
         }
 
         // return disableDeck = false;
