@@ -352,6 +352,10 @@
             }
 
             if (target_img1 === target_img2 && !sameType) {
+                trueSound.currentTime = 0;
+                trueSound.preload = "auto";
+                trueSound.play();
+
                 // if two cards img matched
                 matchedCard++; //increment matched value by one
 
@@ -398,6 +402,10 @@
 
                 // return disableDeck = false;
             } else {
+                falseSound.currentTime = 0;
+                falseSound.preload = "auto";
+                falseSound.play();
+
                 setTimeout(() => {
                     // if two card not matched
                     cardOne.classList.add("shake"); // adding shake class to both card after 400ms

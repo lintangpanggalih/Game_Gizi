@@ -226,6 +226,17 @@
                         .find("img:nth(0)")
                         .css("visibility", "visible")
                         .css("opacity", "1");
+
+                    $.ajax({
+                        url: "{{ route('game.save-result') }}",
+                        type: "PUT",
+                        success: function(response) {
+                            console.log(response);
+                        },
+                        error: function(response) {
+                            console.log(response);
+                        },
+                    })
                 }, 1000);
             }, 700);
         }

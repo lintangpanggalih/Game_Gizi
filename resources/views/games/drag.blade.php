@@ -187,6 +187,10 @@
                     draggableRect.bottom > rect.top
                 ) {
                     if (target.dataset.accept === draggable.id) {
+                        trueSound.currentTime = 0;
+                        trueSound.preload = "auto";
+                        trueSound.play();
+
                         target.style.backgroundImage = `url(${draggable.src})`
                         draggable.remove()
                         target.classList.add('correct');
@@ -202,6 +206,9 @@
                         $('#cardinfo').find('.info-img').prop('src', draggable.dataset.src)
                         $('#cardinfo').fadeIn(500)
                     } else {
+                        falseSound.currentTime = 0;
+                        falseSound.preload = "auto";
+                        falseSound.play();
                         target.classList.add('wrong');
                     }
 

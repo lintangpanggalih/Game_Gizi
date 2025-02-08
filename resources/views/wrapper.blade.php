@@ -135,6 +135,15 @@
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
         });
+        var clickSound = new Audio("{{ asset('sound/click.wav') }}")
+        var trueSound = new Audio("{{ asset('sound/true.mp3') }}")
+        var falseSound = new Audio("{{ asset('sound/false.mp3') }}")
+        $(document).click(function() {
+            clickSound.currentTime = 0;
+            clickSound.preload = "auto";
+            clickSound.play();
+            // document.getElementById('click-sound').play();
+        })
     </script>
     @stack('scripts')
 </body>

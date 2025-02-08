@@ -13,6 +13,7 @@ class LandingController extends Controller
 
     public function map()
     {
+        // return auth()->user();
         $stages = session()->get('game-stages');
         if(empty($stages)) {
             session()->put('game-stages', GameController::$stages);

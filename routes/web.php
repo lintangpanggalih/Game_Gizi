@@ -27,4 +27,5 @@ Route::post('/register', [UserController::class, 'register'])->name('register');
 
 Route::prefix('game')->name('game.')->group(function () {
     Route::put('save-session', [GameController::class, 'sessionHandler'])->name('save-session');
+    Route::put('save-result', [GameController::class, 'storeResult'])->name('save-result');
 });
