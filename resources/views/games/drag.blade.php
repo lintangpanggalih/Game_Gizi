@@ -110,9 +110,9 @@
         </div>
 
         <div class="col" style="padding-left: 0px;">
-            <div alt="Drag4" class="image target" data-index="1" id="target1" data-accept="draggable1">
+            <div alt="Drag4" class="image target" data-index="1" id="target1" data-accept="draggable2">
             </div>
-            <div alt="Drag4" class="image target" data-index="2" id="target2" data-accept="draggable2">
+            <div alt="Drag4" class="image target" data-index="2" id="target2" data-accept="draggable1">
             </div>
             <div alt="Drag4" class="image target" data-index="3" id="target3" data-accept="draggable3">
             </div>
@@ -198,7 +198,7 @@
                         score += 1;
 
                         // console.log(draggable.dataset.src);
-                        
+
                         $('#cardinfo').find('.info-img').prop('src', draggable.dataset.src)
                         $('#cardinfo').fadeIn(500)
                     } else {
@@ -234,7 +234,7 @@
 
         function checkScore(score) {
             if (score == 4) {
-                $('#cardinfo').click(function () {
+                $('#cardinfo').click(function() {
                     $('#cardscore').fadeIn()
                 });
 
