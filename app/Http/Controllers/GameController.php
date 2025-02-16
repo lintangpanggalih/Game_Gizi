@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class GameController extends Controller
 {
@@ -24,6 +25,8 @@ class GameController extends Controller
         $stage = $request->stage;
         $game_stages = session('game-stages');
 
+        Auth::logout();
+        session()->forget('game-stages');
         return $game_stages;
     }
 }

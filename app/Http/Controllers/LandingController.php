@@ -13,9 +13,11 @@ class LandingController extends Controller
 
     public function map()
     {
+        // return $stages = session('game-stages');
+
         // return auth()->user();
         $stages = session()->get('game-stages');
-        if(empty($stages)) {
+        if (empty($stages)) {
             session()->put('game-stages', GameController::$stages);
             // return 'game is not started';
         }
@@ -46,14 +48,6 @@ class LandingController extends Controller
     public function biodata()
     {
         return view('biodata');
-    }
-
-    public function registration()
-    {
-        if (auth()->user()) {
-            return redirect()->route('landing.map');
-        }
-        return view('registration');
     }
 
     public function cardrule()

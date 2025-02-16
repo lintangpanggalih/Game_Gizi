@@ -10,20 +10,15 @@ class UserController extends Controller
 {
     public function showRegisterForm()
     {
-        return view('register');
+        if (auth()->user()) {
+            return redirect()->route('landing.map');
+        }
+
+        return view('registration');
     }
 
     public function register(Request $request)
     {
-        // $request->validate([
-        //     'full_name' => 'required|string|max:255',
-        //     'gender' => 'required|in:Laki-Laki,Perempuan',
-        //     'birth_date' => 'required|date',
-        //     'whatsapp_number' => 'required|string|max:15',
-        //     'weight' => 'required|numeric',
-        //     'height' => 'required|numeric',
-        // ]);
-        // return $request->all();
         $user = User::create($request->all());
 
         Auth::login($user);
@@ -31,9 +26,9 @@ class UserController extends Controller
         return redirect()->route('landing.map');
     }
 
-    public function show(){
+    public function show()
+    {
         $userdata = User::all();
-        return view('admin', ['users'=>$userdata]);
+        return view('admin', ['users' => $userdata]);
     }
 }
-
