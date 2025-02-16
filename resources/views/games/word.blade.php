@@ -28,6 +28,14 @@
     }
 </style>
 @section('content')
+    <div id="cardinfo">
+        <h1 style="color: gold;">CONGRATULATIONS!</h1>
+        <br>
+        <img class="info-img" style="max-width: 100%;">
+        <div class="figure-result">
+            <img src="images/gram-berry/22.png" alt="">
+        </div>
+    </div>
     <div id="cardinstruction">
         <div style="text-align: right;">
             <img src="images/gram-berry/112.png" class="draglogo" style="max-width: 100%;">
@@ -86,35 +94,43 @@
         // Data gambar dan jawaban
         const data = [{
                 image: "images/gram-berry/karbohidrat.png",
-                word: "CUKUPI|KARBOHIDRAT"
+                word: "CUKUPI|KARBOHIDRAT",
+                response_src: 'images/responses/161.png'
             },
             {
                 image: "images/gram-berry/protein.png",
-                word: "PENUHI|PROTEIN|NABATI"
+                word: "PENUHI|PROTEIN|NABATI",
+                response_src: 'images/responses/164.png'
             },
             {
                 image: "images/gram-berry/garam.png",
-                word: "1 SENDOK TEH|PERHARI"
+                word: "1 SENDOK TEH|PERHARI",
+                response_src: 'images/responses/158.png'
             },
             {
                 image: "images/gram-berry/airputih.png",
-                word: "8 GELAS|AIR MINERAL"
+                word: "8 GELAS|AIR MINERAL",
+                response_src: 'images/responses/157.png'
             },
             {
                 image: "images/gram-berry/gula.png",
-                word: "4|SENDOK MAKAN|PERHARI"
+                word: "4|SENDOK MAKAN|PERHARI",
+                response_src: 'images/responses/160.png'
             },
             {
                 image: "images/gram-berry/minyak.png",
-                word: "5|SENDOK MAKAN|PERHARI"
+                word: "5|SENDOK MAKAN|PERHARI",
+                response_src: 'images/responses/159.png'
             },
             {
                 image: "images/gram-berry/sayur.png",
-                word: "PERBAYAK|SUMBER|SERAT"
+                word: "PERBANYAK|SUMBER|SERAT",
+                response_src: 'images/responses/162.png'
             },
             {
                 image: "images/gram-berry/buah.png",
-                word: "KONSUMSI|2-3|PORSI BUAH"
+                word: "KONSUMSI|2-3|PORSI BUAH",
+                response_src: 'images/responses/163.png'
             },
         ];
 
@@ -239,6 +255,10 @@
                 const dataIndex = currentIndex;
                 $('#scoring' + (dataIndex + 1)).find('img').prop('src', 'images/gram-berry/46.png')
 
+                const response_src = data[currentIndex].response_src
+                $('#cardinfo').find('.info-img').prop('src', response_src)
+                $('#cardinfo').fadeIn(500)
+
                 $("#wordinfo").fadeIn();
                 setTimeout(nextRound, 1000);
             }
@@ -249,7 +269,6 @@
 
         // Fungsi untuk ke ronde berikutnya
         function nextRound() {
-            console.log(currentIndex);
             if (currentIndex == 7) {
                 $.ajax({
                     url: "{{ route('game.save-session') }}",
@@ -265,8 +284,10 @@
                         console.log(response);
                     },
                 });
-                // if matched value is 4 that means user has answer all words
-                $("#cardscore").fadeIn();
+                
+                $('#cardinfo').click(function() {
+                    $('#cardscore').fadeIn()
+                });
             }
             currentIndex = (currentIndex + 1) % data.length;
 

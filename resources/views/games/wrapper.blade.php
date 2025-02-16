@@ -1,5 +1,8 @@
 @extends('wrapper')
 <style>
+    .container {
+        height: 200vh !important;
+    }
     .draglogo,
     #draglogo {
         width: 20vh;
