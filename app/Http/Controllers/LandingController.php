@@ -13,40 +13,41 @@ class LandingController extends Controller
 
     public function map()
     {
-        return view('map');
+        // return $stages = session('game-stages');
+
+        // return auth()->user();
+        $stages = session()->get('game-stages');
+        if (empty($stages)) {
+            session()->put('game-stages', GameController::$stages);
+            // return 'game is not started';
+        }
+
+        return view('games.map', compact('stages'));
     }
 
     public function card()
     {
-        return view('card');
+        return view('games.card');
     }
 
     public function word()
     {
-        return view('word');
+        return view('games.word');
     }
 
     public function quiz()
     {
-        return view('quiz');
+        return view('games.quiz');
     }
 
     public function drag()
     {
-        return view('drag');
+        return view('games.drag');
     }
 
     public function biodata()
     {
         return view('biodata');
-    }
-
-    public function registration()
-    {
-        if (auth()->user()) {
-            return redirect()->route('landing.map');
-        }
-        return view('registration');
     }
 
     public function cardrule()
@@ -58,52 +59,4 @@ class LandingController extends Controller
     {
         return view('wordrule');
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create() {}
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request) {}
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id) {}
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id) {}
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id) {}
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id) {}
 }
