@@ -8,6 +8,17 @@ use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
+    public function login()
+    {
+        return view('admin.login');
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->route('login');
+    }
+
     public function showRegisterForm()
     {
         if (session('game-stages')) {
@@ -26,7 +37,7 @@ class UserController extends Controller
             session()->put('game-stages', GameController::$stages);
             // return 'game is not started';
         }
-        
+
         return redirect()->route('landing.map');
     }
 
