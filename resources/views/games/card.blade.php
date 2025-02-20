@@ -20,299 +20,299 @@
         <br>
         <img class="info-img" style="max-width: 100%;">
         <div class="figure-result">
-            <img src="images/mineral-memory/15.png" alt="">
+            <img src="images-v2/mineral-memory/15.png" alt="">
         </div>
     </div>
     <div id="cardinstruction">
         <div style="text-align: right;">
-            <img src="images/mineral-memory/27.png" class="draglogo" style="max-width: 100%;">
+            <img src="images-v2/mineral-memory/27.png" class="draglogo" style="max-width: 100%;">
         </div>
         <br>
         <div id="instruction-board">
             Temukan pasangan deskripsi yang tepat dari setiap kotak yang berisi gambar. hafalkan karena merupakan petunjuk untuk permainan selanjutnya.
         </div>
         <div class="btn-start-img">
-            <img src="images/start.png" alt="" style="max-width: 150px;">
+            <img src="images-v2/start.png" alt="" style="max-width: 150px;">
         </div>
         {{-- <div class="figure-instruction">
-            <img src="images/mineral-memory/15.png" alt="">
+            <img src="images-v2/mineral-memory/15.png" alt="">
         </div> --}}
     </div>
     <div id="cardscore">
         <h1 style="color: gold;">CONGRATULATIONS!</h1>
         <br>
-        <img src="images/mineral-memory/111.png" alt="" style="max-width: 100%;">
+        <img src="images-v2/mineral-memory/111.png" alt="" style="max-width: 100%;">
         <div class="start-button">
         </div>
         <div class="figure-score">
-            <img src="images/mineral-memory/15.png" alt="">
+            <img src="images-v2/mineral-memory/15.png" alt="">
             <div class="btn-submit-img">
-                <img src="images/main/7.png" alt="" style="max-width: 150px;">
+                <img src="images-v2/main/7.png" alt="" style="max-width: 150px;">
             </div>
         </div>
     </div>
 
     <div style="text-align: right;">
-        <img src="images/mineral-memory/27.png" id="draglogo">
+        <img src="images-v2/mineral-memory/27.png" id="draglogo">
     </div>
     <div class="cards" id="cards-container">
         <div class="card">
             <div class="view front-view">
-                <img src="/images/mineral-memory/39.png" alt="">
+                <img src="/images-v2/mineral-memory/39.png" alt="">
             </div>
             <div class="view back-view">
-                <img src="/images/img-1.png" class="img-memory food" data-id="card-img-1" data-src="images/responses/160.png" alt="Card Image">
+                <img src="/images-v2/img-1.png" class="img-memory food" data-id="card-img-1" data-src="images-v2/responses/160.png" alt="Card Image">
             </div>
         </div>
         <div class="card">
             <div class="view front-view">
-                <img src="/images/mineral-memory/39.png" alt="">
+                <img src="/images-v2/mineral-memory/39.png" alt="">
             </div>
             <div class="view back-view">
-                <img src="/images/img-2.png" class="img-memory food" data-id="card-img-2" data-src="images/responses/158.png" alt="Card Image">
+                <img src="/images-v2/img-2.png" class="img-memory food" data-id="card-img-2" data-src="images-v2/responses/158.png" alt="Card Image">
             </div>
         </div>
         <div class="card">
             <div class="view front-view">
-                <img src="/images/mineral-memory/39.png" alt="">
+                <img src="/images-v2/mineral-memory/39.png" alt="">
             </div>
             <div class="view back-view">
-                <img src="/images/img-3.png" class="img-memory food" data-id="card-img-3" data-src="images/responses/157.png" alt="Card Image">
+                <img src="/images-v2/img-3.png" class="img-memory food" data-id="card-img-3" data-src="images-v2/responses/157.png" alt="Card Image">
             </div>
         </div>
         <div class="card">
             <div class="view front-view">
-                <img src="/images/mineral-memory/39.png" alt="">
+                <img src="/images-v2/mineral-memory/39.png" alt="">
             </div>
             <div class="view back-view">
-                <img src="/images/img-4.png" class="img-memory food" data-id="card-img-4" data-src="images/responses/164.png" alt="Card Image">
+                <img src="/images-v2/img-4.png" class="img-memory food" data-id="card-img-4" data-src="images-v2/responses/164.png" alt="Card Image">
             </div>
         </div>
         <div class="card">
             <div class="view front-view">
-                <img src="/images/mineral-memory/39.png" alt="">
+                <img src="/images-v2/mineral-memory/39.png" alt="">
             </div>
             <div class="view back-view">
-                <img src="/images/img-5.png" class="img-memory food" data-id="card-img-5" data-src="images/responses/164.png" alt="Card Image">
+                <img src="/images-v2/img-5.png" class="img-memory food" data-id="card-img-5" data-src="images-v2/responses/164.png" alt="Card Image">
             </div>
         </div>
         <div class="card">
             <div class="view front-view">
-                <img src="/images/mineral-memory/39.png" alt="">
+                <img src="/images-v2/mineral-memory/39.png" alt="">
             </div>
             <div class="view back-view">
-                <img src="/images/img-6.png" class="img-memory food" data-id="card-img-6" data-src="images/responses/162.png" alt="Card Image">
+                <img src="/images-v2/img-6.png" class="img-memory food" data-id="card-img-6" data-src="images-v2/responses/162.png" alt="Card Image">
             </div>
         </div>
         <div class="card">
             <div class="view front-view">
-                <img src="/images/mineral-memory/39.png" alt="">
+                <img src="/images-v2/mineral-memory/39.png" alt="">
             </div>
             <div class="view back-view">
-                <img src="/images/img-7.png" class="img-memory food" data-id="card-img-7" data-src="images/responses/163.png" alt="Card Image">
+                <img src="/images-v2/img-7.png" class="img-memory food" data-id="card-img-7" data-src="images-v2/responses/163.png" alt="Card Image">
             </div>
         </div>
         <div class="card">
             <div class="view front-view">
-                <img src="/images/mineral-memory/39.png" alt="">
+                <img src="/images-v2/mineral-memory/39.png" alt="">
             </div>
             <div class="view back-view">
-                <img src="/images/img-8.png" class="img-memory food" data-id="card-img-8" data-src="images/responses/161.png" alt="Card Image">
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="view front-view">
-                <img src="/images/mineral-memory/39.png" alt="">
-            </div>
-            <div class="view back-view">
-                <img src="/images/img1.png" class="img-memory description" data-id="card-img-1" data-src="images/responses/160.png" alt="Card Image">
-            </div>
-        </div>
-        <div class="card">
-            <div class="view front-view">
-                <img src="/images/mineral-memory/39.png" alt="">
-            </div>
-            <div class="view back-view">
-                <img src="/images/img2.png" class="img-memory description" data-id="card-img-2" data-src="images/responses/158.png" alt="card-image">
-            </div>
-        </div>
-        <div class="card">
-            <div class="view front-view">
-                <img src="/images/mineral-memory/39.png" alt="">
-            </div>
-            <div class="view back-view">
-                <img src="/images/img3.png" class="img-memory description" data-id="card-img-3" data-src="images/responses/157.png" alt="Card Image">
-            </div>
-        </div>
-        <div class="card">
-            <div class="view front-view">
-                <img src="/images/mineral-memory/39.png" alt="">
-            </div>
-            <div class="view back-view">
-                <img src="/images/img4.png" class="img-memory description" data-id="card-img-4" data-src="images/responses/164.png" alt="Card Image">
-            </div>
-        </div>
-        <div class="card">
-            <div class="view front-view">
-                <img src="/images/mineral-memory/39.png" alt="">
-            </div>
-            <div class="view back-view">
-                <img src="/images/img5.png" class="img-memory description" data-id="card-img-5" data-src="images/responses/164.png" alt="Card Image">
-            </div>
-        </div>
-        <div class="card">
-            <div class="view front-view">
-                <img src="/images/mineral-memory/39.png" alt="">
-            </div>
-            <div class="view back-view">
-                <img src="/images/img6.png" class="img-memory description" data-id="card-img-6" data-src="images/responses/162.png" alt="Card Image">
-            </div>
-        </div>
-        <div class="card">
-            <div class="view front-view">
-                <img src="/images/mineral-memory/39.png" alt="">
-            </div>
-            <div class="view back-view">
-                <img src="/images/img7.png" class="img-memory description" data-id="card-img-7" data-src="images/responses/163.png" alt="Card Image">
-            </div>
-        </div>
-        <div class="card">
-            <div class="view front-view">
-                <img src="/images/mineral-memory/39.png" alt="">
-            </div>
-            <div class="view back-view">
-                <img src="/images/img8.png" class="img-memory description" data-id="card-img-8" data-src="images/responses/161.png" alt="Card Image">
+                <img src="/images-v2/img-8.png" class="img-memory food" data-id="card-img-8" data-src="images-v2/responses/161.png" alt="Card Image">
             </div>
         </div>
 
         <div class="card">
             <div class="view front-view">
-                <img src="/images/mineral-memory/39.png" alt="">
+                <img src="/images-v2/mineral-memory/39.png" alt="">
             </div>
             <div class="view back-view">
-                <img src="/images/img-1.png" class="img-memory food" data-id="card-img-1" data-src="images/responses/160.png" alt="Card Image">
+                <img src="/images-v2/img1.png" class="img-memory description" data-id="card-img-1" data-src="images-v2/responses/160.png" alt="Card Image">
             </div>
         </div>
         <div class="card">
             <div class="view front-view">
-                <img src="/images/mineral-memory/39.png" alt="">
+                <img src="/images-v2/mineral-memory/39.png" alt="">
             </div>
             <div class="view back-view">
-                <img src="/images/img-2.png" class="img-memory food" data-id="card-img-2" data-src="images/responses/158.png" alt="Card Image">
+                <img src="/images-v2/img2.png" class="img-memory description" data-id="card-img-2" data-src="images-v2/responses/158.png" alt="card-image">
             </div>
         </div>
         <div class="card">
             <div class="view front-view">
-                <img src="/images/mineral-memory/39.png" alt="">
+                <img src="/images-v2/mineral-memory/39.png" alt="">
             </div>
             <div class="view back-view">
-                <img src="/images/img-3.png" class="img-memory food" data-id="card-img-3" data-src="images/responses/157.png" alt="Card Image">
+                <img src="/images-v2/img3.png" class="img-memory description" data-id="card-img-3" data-src="images-v2/responses/157.png" alt="Card Image">
             </div>
         </div>
         <div class="card">
             <div class="view front-view">
-                <img src="/images/mineral-memory/39.png" alt="">
+                <img src="/images-v2/mineral-memory/39.png" alt="">
             </div>
             <div class="view back-view">
-                <img src="/images/img-4.png" class="img-memory food" data-id="card-img-4" data-src="images/responses/164.png" alt="Card Image">
+                <img src="/images-v2/img4.png" class="img-memory description" data-id="card-img-4" data-src="images-v2/responses/164.png" alt="Card Image">
             </div>
         </div>
         <div class="card">
             <div class="view front-view">
-                <img src="/images/mineral-memory/39.png" alt="">
+                <img src="/images-v2/mineral-memory/39.png" alt="">
             </div>
             <div class="view back-view">
-                <img src="/images/img-5.png" class="img-memory food" data-id="card-img-5" data-src="images/responses/164.png" alt="Card Image">
+                <img src="/images-v2/img5.png" class="img-memory description" data-id="card-img-5" data-src="images-v2/responses/164.png" alt="Card Image">
             </div>
         </div>
         <div class="card">
             <div class="view front-view">
-                <img src="/images/mineral-memory/39.png" alt="">
+                <img src="/images-v2/mineral-memory/39.png" alt="">
             </div>
             <div class="view back-view">
-                <img src="/images/img-6.png" class="img-memory food" data-id="card-img-6" data-src="images/responses/162.png" alt="Card Image">
+                <img src="/images-v2/img6.png" class="img-memory description" data-id="card-img-6" data-src="images-v2/responses/162.png" alt="Card Image">
             </div>
         </div>
         <div class="card">
             <div class="view front-view">
-                <img src="/images/mineral-memory/39.png" alt="">
+                <img src="/images-v2/mineral-memory/39.png" alt="">
             </div>
             <div class="view back-view">
-                <img src="/images/img-7.png" class="img-memory food" data-id="card-img-7" data-src="images/responses/163.png" alt="Card Image">
+                <img src="/images-v2/img7.png" class="img-memory description" data-id="card-img-7" data-src="images-v2/responses/163.png" alt="Card Image">
             </div>
         </div>
         <div class="card">
             <div class="view front-view">
-                <img src="/images/mineral-memory/39.png" alt="">
+                <img src="/images-v2/mineral-memory/39.png" alt="">
             </div>
             <div class="view back-view">
-                <img src="/images/img-8.png" class="img-memory food" data-id="card-img-8" data-src="images/responses/161.png" alt="Card Image">
+                <img src="/images-v2/img8.png" class="img-memory description" data-id="card-img-8" data-src="images-v2/responses/161.png" alt="Card Image">
             </div>
         </div>
 
         <div class="card">
             <div class="view front-view">
-                <img src="/images/mineral-memory/39.png" alt="">
+                <img src="/images-v2/mineral-memory/39.png" alt="">
             </div>
             <div class="view back-view">
-                <img src="/images/img1.png" class="img-memory description" data-id="card-img-1" data-src="images/responses/160.png" alt="Card Image">
+                <img src="/images-v2/img-1.png" class="img-memory food" data-id="card-img-1" data-src="images-v2/responses/160.png" alt="Card Image">
             </div>
         </div>
         <div class="card">
             <div class="view front-view">
-                <img src="/images/mineral-memory/39.png" alt="">
+                <img src="/images-v2/mineral-memory/39.png" alt="">
             </div>
             <div class="view back-view">
-                <img src="/images/img2.png" class="img-memory description" data-id="card-img-2" data-src="images/responses/158.png" alt="card-image">
+                <img src="/images-v2/img-2.png" class="img-memory food" data-id="card-img-2" data-src="images-v2/responses/158.png" alt="Card Image">
             </div>
         </div>
         <div class="card">
             <div class="view front-view">
-                <img src="/images/mineral-memory/39.png" alt="">
+                <img src="/images-v2/mineral-memory/39.png" alt="">
             </div>
             <div class="view back-view">
-                <img src="/images/img3.png" class="img-memory description" data-id="card-img-3" data-src="images/responses/157.png" alt="Card Image">
+                <img src="/images-v2/img-3.png" class="img-memory food" data-id="card-img-3" data-src="images-v2/responses/157.png" alt="Card Image">
             </div>
         </div>
         <div class="card">
             <div class="view front-view">
-                <img src="/images/mineral-memory/39.png" alt="">
+                <img src="/images-v2/mineral-memory/39.png" alt="">
             </div>
             <div class="view back-view">
-                <img src="/images/img4.png" class="img-memory description" data-id="card-img-4" data-src="images/responses/164.png" alt="Card Image">
+                <img src="/images-v2/img-4.png" class="img-memory food" data-id="card-img-4" data-src="images-v2/responses/164.png" alt="Card Image">
             </div>
         </div>
         <div class="card">
             <div class="view front-view">
-                <img src="/images/mineral-memory/39.png" alt="">
+                <img src="/images-v2/mineral-memory/39.png" alt="">
             </div>
             <div class="view back-view">
-                <img src="/images/img5.png" class="img-memory description" data-id="card-img-5" data-src="images/responses/164.png" alt="Card Image">
+                <img src="/images-v2/img-5.png" class="img-memory food" data-id="card-img-5" data-src="images-v2/responses/164.png" alt="Card Image">
             </div>
         </div>
         <div class="card">
             <div class="view front-view">
-                <img src="/images/mineral-memory/39.png" alt="">
+                <img src="/images-v2/mineral-memory/39.png" alt="">
             </div>
             <div class="view back-view">
-                <img src="/images/img6.png" class="img-memory description" data-id="card-img-6" data-src="images/responses/162.png" alt="Card Image">
+                <img src="/images-v2/img-6.png" class="img-memory food" data-id="card-img-6" data-src="images-v2/responses/162.png" alt="Card Image">
             </div>
         </div>
         <div class="card">
             <div class="view front-view">
-                <img src="/images/mineral-memory/39.png" alt="">
+                <img src="/images-v2/mineral-memory/39.png" alt="">
             </div>
             <div class="view back-view">
-                <img src="/images/img7.png" class="img-memory description" data-id="card-img-7" data-src="images/responses/163.png" alt="Card Image">
+                <img src="/images-v2/img-7.png" class="img-memory food" data-id="card-img-7" data-src="images-v2/responses/163.png" alt="Card Image">
             </div>
         </div>
         <div class="card">
             <div class="view front-view">
-                <img src="/images/mineral-memory/39.png" alt="">
+                <img src="/images-v2/mineral-memory/39.png" alt="">
             </div>
             <div class="view back-view">
-                <img src="/images/img8.png" class="img-memory description" data-id="card-img-8" data-src="images/responses/161.png" alt="Card Image">
+                <img src="/images-v2/img-8.png" class="img-memory food" data-id="card-img-8" data-src="images-v2/responses/161.png" alt="Card Image">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="view front-view">
+                <img src="/images-v2/mineral-memory/39.png" alt="">
+            </div>
+            <div class="view back-view">
+                <img src="/images-v2/img1.png" class="img-memory description" data-id="card-img-1" data-src="images-v2/responses/160.png" alt="Card Image">
+            </div>
+        </div>
+        <div class="card">
+            <div class="view front-view">
+                <img src="/images-v2/mineral-memory/39.png" alt="">
+            </div>
+            <div class="view back-view">
+                <img src="/images-v2/img2.png" class="img-memory description" data-id="card-img-2" data-src="images-v2/responses/158.png" alt="card-image">
+            </div>
+        </div>
+        <div class="card">
+            <div class="view front-view">
+                <img src="/images-v2/mineral-memory/39.png" alt="">
+            </div>
+            <div class="view back-view">
+                <img src="/images-v2/img3.png" class="img-memory description" data-id="card-img-3" data-src="images-v2/responses/157.png" alt="Card Image">
+            </div>
+        </div>
+        <div class="card">
+            <div class="view front-view">
+                <img src="/images-v2/mineral-memory/39.png" alt="">
+            </div>
+            <div class="view back-view">
+                <img src="/images-v2/img4.png" class="img-memory description" data-id="card-img-4" data-src="images-v2/responses/164.png" alt="Card Image">
+            </div>
+        </div>
+        <div class="card">
+            <div class="view front-view">
+                <img src="/images-v2/mineral-memory/39.png" alt="">
+            </div>
+            <div class="view back-view">
+                <img src="/images-v2/img5.png" class="img-memory description" data-id="card-img-5" data-src="images-v2/responses/164.png" alt="Card Image">
+            </div>
+        </div>
+        <div class="card">
+            <div class="view front-view">
+                <img src="/images-v2/mineral-memory/39.png" alt="">
+            </div>
+            <div class="view back-view">
+                <img src="/images-v2/img6.png" class="img-memory description" data-id="card-img-6" data-src="images-v2/responses/162.png" alt="Card Image">
+            </div>
+        </div>
+        <div class="card">
+            <div class="view front-view">
+                <img src="/images-v2/mineral-memory/39.png" alt="">
+            </div>
+            <div class="view back-view">
+                <img src="/images-v2/img7.png" class="img-memory description" data-id="card-img-7" data-src="images-v2/responses/163.png" alt="Card Image">
+            </div>
+        </div>
+        <div class="card">
+            <div class="view front-view">
+                <img src="/images-v2/mineral-memory/39.png" alt="">
+            </div>
+            <div class="view back-view">
+                <img src="/images-v2/img8.png" class="img-memory description" data-id="card-img-8" data-src="images-v2/responses/161.png" alt="Card Image">
             </div>
         </div>
     </div>

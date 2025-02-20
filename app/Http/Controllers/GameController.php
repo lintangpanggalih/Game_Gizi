@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 
 class GameController extends Controller
 {
-    public static $stages = [];
+    public static $stages = ['init'];
 
     public function sessionHandler(Request $request)
     {
@@ -25,7 +25,7 @@ class GameController extends Controller
         $stage = $request->stage;
         $game_stages = session('game-stages');
 
-        Auth::logout();
+        // Auth::logout();
         session()->forget('game-stages');
         return $game_stages;
     }

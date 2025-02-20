@@ -40,7 +40,7 @@
     #cardinstruction {
         display: block;
         padding-top: 0px;
-        background: linear-gradient(0deg, rgba(255, 217, 0, 0.164), rgba(168, 143, 0, 0.1)), url("{{ asset('images/main/main-bg.png') }}");
+        background: linear-gradient(0deg, rgba(255, 217, 0, 0.164), rgba(168, 143, 0, 0.1)), url("{{ asset('images-v2/main/main-bg.png') }}");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -52,7 +52,7 @@
         font-size: 1.2em;
         box-sizing: border-box;
         overflow-wrap: break-word;
-        background-image: url("/images/basic/question-board.png");
+        background-image: url("/images-v2/basic/question-board.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -120,7 +120,7 @@
         height: 150px;
         margin-top: 10% !important;
         width: 100% !important;
-        background-image: url('images/basic/question-board.png');
+        background-image: url('images-v2/basic/question-board.png');
         background-size: contain;
         background-repeat: repeat-x;
     }

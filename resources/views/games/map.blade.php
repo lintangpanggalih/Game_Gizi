@@ -19,7 +19,7 @@
     }
 
     .map-container {
-        background-image: url("/images/map.png");
+        background-image: url("/images-v2/map.png");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -95,46 +95,46 @@
 @section('content')
     @if (!$stages)
         <div id="rule-board">
-            <img src="images/homepage/rule-title.png" alt="" width="300px">
-            <img src="images/homepage/rule-board.png" alt="" id="rule-board-img">
+            <img src="images-v2/homepage/rule-title.png" alt="" width="300px">
+            <img src="images-v2/homepage/rule-board.png" alt="" id="rule-board-img">
         </div>
     @endif
     <div id="map-wrapper" @if (!$stages) style="display: none;" @endif>
-        <img id="treasure-map" src="images/homepage/9.png" alt="Peta Harta Karun">
+        <img id="treasure-map" src="images-v2/homepage/9.png" alt="Peta Harta Karun">
         <div class="map-container">
             <button id="button1" class="map-button" onclick="showMessage('Petunjuk 1: Lihat ke arah pohon besar!')">
                 <a href="{{ route('landing.quiz') }}">
                     @if ($stages['quiz'] ?? null)
-                        <img src="images/quiz/18.png" alt="" width="100vw">
+                        <img src="images-v2/quiz/18.png" alt="" width="100vw">
                     @else
-                        <img src="images/homepage/12.png" alt="" width="100vw">
+                        <img src="images-v2/homepage/12.png" alt="" width="100vw">
                     @endif
                 </a>
             </button>
             <button id="button2" class="map-button" onclick="showMessage('Petunjuk 2: Gali di dekat batu besar!')">
                 <a href="{{ route('landing.word') }}">
                     @if ($stages['gram-berry'] ?? null)
-                        <img src="images/gram-berry/22.png" alt="" width="100vw">
+                        <img src="images-v2/gram-berry/22.png" alt="" width="100vw">
                     @else
-                        <img src="images/homepage/12.png" alt="" width="100vw">
+                        <img src="images-v2/homepage/12.png" alt="" width="100vw">
                     @endif
                 </a>
             </button>
             <button id="button3" class="map-button">
                 <a href="{{ route('landing.card') }}">
                     @if ($stages['mineral-memory'] ?? null)
-                        <img src="images/mineral-memory/21.png" alt="" width="100vw">
+                        <img src="images-v2/mineral-memory/21.png" alt="" width="100vw">
                     @else
-                        <img src="images/homepage/12.png" alt="" width="100vw">
+                        <img src="images-v2/homepage/12.png" alt="" width="100vw">
                     @endif
                 </a>
             </button>
             <button id="button4" class="map-button" onclick=>
                 <a href="{{ route('landing.drag') }}">
                     @if ($stages['meat-match-up'] ?? null)
-                        <img src="images/meat-match-up/20.png" alt="" width="100vw">
+                        <img src="images-v2/meat-match-up/20.png" alt="" width="100vw">
                     @else
-                        <img src="images/homepage/12.png" alt="" width="100vw">
+                        <img src="images-v2/homepage/12.png" alt="" width="100vw">
                     @endif
                 </a>
             </button>

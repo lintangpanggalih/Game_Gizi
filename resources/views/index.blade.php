@@ -32,7 +32,7 @@
         
         .hero-image {
             /* background-color: #cccccc; */
-            background-image: url("/images/bg2.png");
+            background-image: url("/images-v2/bg2.png");
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -103,7 +103,7 @@
 
         <div class="hero-image">
         <div class="image">
-            <img src="/images/lady2.png" alt="Woman eating strawberry">
+            <img src="/images-v2/lady2.png" alt="Woman eating strawberry">
         </div>
         <br>
         <a class="btn btn-danger" href="{{ route('landing.biodata')}}" role="button">START NOW</a>
@@ -112,10 +112,10 @@
 
         <!-- <div class="table">
             <div class="food">
-                <img src="/images/food1.png" alt="Salad">
+                <img src="/images-v2/food1.png" alt="Salad">
             </div>
             <div class="food">
-                <img src="/images/food2.png" alt="Indonesian dish">
+                <img src="/images-v2/food2.png" alt="Indonesian dish">
             </div>
             <div class="food">
                 <img src="fruit_platter.png" alt="Fruit platter">

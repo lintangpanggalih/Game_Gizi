@@ -6,7 +6,7 @@
 <style>
     #btn-true {
         background: none;
-        background-image: url("{{ asset('images/quiz/42.png') }}");
+        background-image: url("{{ asset('images-v2/quiz/42.png') }}");
         background-size: cover;
         background-position: 5px center;
         background-repeat: no-repeat;
@@ -15,7 +15,7 @@
 
     #btn-false {
         background: none;
-        background-image: url("{{ asset('images/quiz/48.png') }}");
+        background-image: url("{{ asset('images-v2/quiz/48.png') }}");
         background-size: cover;
         background-position: 5px center;
         background-repeat: no-repeat;
@@ -37,56 +37,56 @@
         <br>
         <img class="info-img" style="max-width: 100%;">
         <div class="figure-result">
-            <img src="images/quiz/24.png" alt="">
+            <img src="images-v2/quiz/24.png" alt="">
         </div>
     </div>
     <div id="cardscore">
         <h1 style="color: gold;">CONGRATULATIONS!</h1>
         <br>
-        <img src="images/quiz/114.png" alt="" style="max-width: 100%;">
+        <img src="images-v2/quiz/114.png" alt="" style="max-width: 100%;">
         <div class="start-button">
         </div>
         <div class="figure-score">
-            <img src="images/quiz/24.png" alt="">
+            <img src="images-v2/quiz/24.png" alt="">
             <div class="btn-submit-img">
-                <img src="images/main/7.png" alt="" style="max-width: 150px;">
+                <img src="images-v2/main/7.png" alt="" style="max-width: 150px;">
             </div>
         </div>
     </div>
     <div id="cardinstruction">
         <div style="text-align: right;">
-            <img src="images/quiz/30.png" class="draglogo" style="max-width: 100%;">
+            <img src="images-v2/quiz/30.png" class="draglogo" style="max-width: 100%;">
         </div>
         <br>
         <div id="instruction-board">
-            Tulis deskripsi dari gambar yang muncul, karena merupakan petunjuk untuk permainan selanjutnya.
+            Pilih jawaban "True" atau "False" berdasarkan pernyataan.
         </div>
         <div class="btn-start-img">
-            <img src="images/start.png" alt="" style="max-width: 150px;">
+            <img src="images-v2/start.png" alt="" style="max-width: 150px;">
         </div>
         {{-- <div class="figure-instruction">
-            <img src="images/meat-match-up/14.png" alt="">
+            <img src="images-v2/meat-match-up/14.png" alt="">
         </div> --}}
     </div>
     <div id="cardresult">
         <h1 style="color: gold;">CONGRATULATIONS!</h1>
         <br>
-        <img src="images/quiz/124.png" alt="" style="max-width: 100%;">
+        <img src="images-v2/quiz/124.png" alt="" style="max-width: 100%;">
         <div class="start-button">
         </div>
         <div class="figure-result">
-            <img src="images/quiz/chest-opening-1-loop.gif" alt="">
+            <img src="images-v2/quiz/chest-opening-1-loop.gif" alt="">
         </div>
     </div>
     <div id="cardwrong">
         <div class="figure-wrong">
-            <img src="images/quiz/120.png" alt="">
+            <img src="images-v2/quiz/120.png" alt="">
         </div>
-        <img src="images/quiz/121.png" alt="" style="max-width: 250px;margin-top: -50px;">
+        <img src="images-v2/quiz/121.png" alt="" style="max-width: 250px;margin-top: -50px;">
     </div>
 
     <div style="text-align: right;">
-        <img src="images/quiz/30.png" id="draglogo">
+        <img src="images-v2/quiz/30.png" id="draglogo">
     </div>
     <div class="quiz-container">
         <div id="quiz">
@@ -121,43 +121,43 @@
                 question: "Pedoman Gizi Seimbang di Indonesia saat ini adalah <br> <b>4 Sehat 5 Sempurna</b>",
                 options: ["True", "False"],
                 answer: "False",
-                response_src: null
+                response_src: 'images-v2/responses/166.png'
             },
             {
                 question: "Pedoman Gizi Seimbang di Indonesia saat ini adalah <br> <b>Empat pilar gizi seimbang.</b>",
                 options: ["True", "False"],
                 answer: "True",
-                response_src: 'images/responses/165.png'
+                response_src: 'images-v2/responses/165.png'
             },
-            {
-                question: `Empat pilar gizi seimbang adalah: <br> 1. Mengonsumsi makanan yang beragam <br> 2. Membiasakan perilaku hidup bersih <br> 3. Menjaga berat badan ideal <br> 4. Pola hidup aktif dan berolahraga`,
-                options: ["True", "False"],
-                answer: "False",
-                response_src: 'images/responses/166.png'
-            },
+            // {
+            //     question: `Empat pilar gizi seimbang adalah: <br> 1. Mengonsumsi makanan yang beragam <br> 2. Membiasakan perilaku hidup bersih <br> 3. Menjaga berat badan ideal <br> 4. Pola hidup aktif dan berolahraga`,
+            //     options: ["True", "False"],
+            //     answer: "True",
+            //     response_src: 'images-v2/responses/166.png'
+            // },
             {
                 question: "Bagian dasar tumpeng gizi seimbang menggambarkan bahan makanan pokok yang harus dikonsumsi. Makanan pokok merupakan sumber karbohidrat bagi tubuh. Normalnya, porsi makanan pokok yang disarankan adalah 2-3 porsi dalam satu hari.",
                 options: ["True", "False"],
-                answer: "True",
-                response_src: 'images/responses/161.png'
+                answer: "False",
+                response_src: 'images-v2/responses/161.png'
             },
             {
                 question: "Lapisan kedua terdapat buah dan sayuran sebagai sumber vitamin, mineral, dan serat pangan. Kandungan buah dan sayur sangat bermanfaat dalam proses metabolisme atau proses bekerjanya fungsi tubuh. Anjuran konsumsi sayur yaitu 3 - 4 porsi dalam satu kali makan.",
                 options: ["True", "False"],
                 answer: "True",
-                response_src: 'images/responses/162.png'
+                response_src: 'images-v2/responses/162.png'
             },
             {
                 question: "Lapisan kedua terdapat buah dan sayuran sebagai sumber vitamin, mineral, dan serat pangan. Kandungan buah dan sayur sangat bermanfaat dalam proses metabolisme atau proses bekerjanya fungsi tubuh. Sementara itu, porsi buah disarankan untuk dikonsumsi sebanyak 2-3 porsi dalam satu hari.",
                 options: ["True", "False"],
-                answer: "False",
-                response_src: 'images/responses/162.png'
+                answer: "True",
+                response_src: 'images-v2/responses/162.png'
             },
             {
                 question: "Lapisan ketiga terdapat lauk-pauk hewani, susu, serta sumber protein dan lemak lainnya.Protein adalah zat pembangun yang penting bagi kesehatan tubuh.Porsi protein yang disarankan adalah 4-5 porsi makanan sumber protein setiap harinya.",
                 options: ["True", "False"],
-                answer: "True",
-                response_src: 'images/responses/164.png'
+                answer: "False",
+                response_src: 'images-v2/responses/164.png'
             },
             {
                 question: "Lapisan puncak terdapat garam, gula, dan lemak. Area puncak yang sempit menandakan kita harus mengkonsumsi ketiga makanan ini dalam jumlah yang sedikit. Anjuran konsumsi gula, garam, dan minyak disingkat menjadi: <br> <b>G4-G1-L5</b>",
@@ -168,26 +168,26 @@
             {
                 question: "Anjuran Konsumsi Gula: <br> Maksimal 4 sdm (50 gram) per hari.",
                 options: ["True", "False"],
-                answer: "False",
-                response_src: 'images/responses/160.png'
+                answer: "True",
+                response_src: 'images-v2/responses/160.png'
             },
             {
                 question: "Anjuran Konsumsi Garam: <br> Maksimal 4 sdm (40 gram) per hari.",
                 options: ["True", "False"],
-                answer: "True",
-                response_src: 'images/responses/158.png'
+                answer: "False",
+                response_src: 'images-v2/responses/158.png'
             },
             {
                 question: "Anjuran Konsumsi Lemak: <br> 5 sdm (67 gram) per hari.",
                 options: ["True", "False"],
-                answer: "False",
-                response_src: 'images/responses/159.png'
+                answer: "True",
+                response_src: 'images-v2/responses/159.png'
             },
             {
                 question: "Lengkapi gizi seimbang dengan minum air putih yang cukup minimal 8 botol sehari.",
                 options: ["True", "False"],
                 answer: "False",
-                response_src: 'images/responses/157.png'
+                response_src: 'images-v2/responses/157.png'
             },
         ];
 

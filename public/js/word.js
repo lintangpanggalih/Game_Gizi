@@ -1,19 +1,19 @@
 // Data gambar dan jawaban
 const data = [
-    { image: "images/gram-berry/karbohidrat.png", word: "CUKUPI|KARBOHIDRAT" },
-    { image: "images/gram-berry/protein.png", word: "PENUHI|PROTEIN|NABATI" },
-    { image: "images/gram-berry/garam.png", word: "1 SENDOK TEH|PERHARI" },
-    { image: "images/gram-berry/airputih.png", word: "8 GELAS|AIR MINERAL" },
-    { image: "images/gram-berry/gula.png", word: "4|SENDOK MAKAN|PERHARI" },
-    { image: "images/gram-berry/minyak.png", word: "5|SENDOK MAKAN|PERHARI" },
-    { image: "images/gram-berry/sayur.png", word: "PERBAYAK|SUMBER|SERAT" },
-    { image: "images/gram-berry/buah.png", word: "KONSUMSI|2-3|PORSI BUAH" },
+    { image: "images-v2/gram-berry/karbohidrat.png", word: "CUKUPI|KARBOHIDRAT" },
+    { image: "images-v2/gram-berry/protein.png", word: "PENUHI|PROTEIN|NABATI" },
+    { image: "images-v2/gram-berry/garam.png", word: "1 SENDOK TEH|PERHARI" },
+    { image: "images-v2/gram-berry/airputih.png", word: "8 GELAS|AIR MINERAL" },
+    { image: "images-v2/gram-berry/gula.png", word: "4|SENDOK MAKAN|PERHARI" },
+    { image: "images-v2/gram-berry/minyak.png", word: "5|SENDOK MAKAN|PERHARI" },
+    { image: "images-v2/gram-berry/sayur.png", word: "PERBAYAK|SUMBER|SERAT" },
+    { image: "images-v2/gram-berry/buah.png", word: "KONSUMSI|2-3|PORSI BUAH" },
 ];
 
 $(document).ready(function () {
     let scoreEl = "";
     for (let i = 1; i <= data.length; i++) {
-        scoreEl += `<div class="col" id="scoring${i}"><img src="images/gram-berry/40.png" width="50px"></div>`;
+        scoreEl += `<div class="col" id="scoring${i}"><img src="images-v2/gram-berry/40.png" width="50px"></div>`;
     }
 
     $(".scoring").html(scoreEl);
@@ -130,7 +130,7 @@ function selectLetter(letter, button) {
     if (guessedWord === currentWord) {
         // statusElement.textContent = "Selamat! Kamu berhasil!";
         const dataIndex = currentIndex;
-        $('#scoring' + (dataIndex + 1)).find('img').prop('src', 'images/gram-berry/46.png')
+        $('#scoring' + (dataIndex + 1)).find('img').prop('src', 'images-v2/gram-berry/46.png')
 
         $("#wordinfo").fadeIn();
         setTimeout(nextRound, 1000);

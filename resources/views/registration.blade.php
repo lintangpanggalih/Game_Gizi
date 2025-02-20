@@ -8,9 +8,9 @@
     }
 </style>
 @section('content')
-    {{-- <img class="centered-img" id="welcome-img" src="{{ asset('images/main/welcome.png') }}" alt=""> --}}
+    {{-- <img class="centered-img" id="welcome-img" src="{{ asset('images-v2/main/welcome.png') }}" alt=""> --}}
     {{-- <audio id="bg-music" src="{{ asset('music/bg-music.mp3') }}" autoplay loop></audio> --}}
-    <img id="title-img" src="{{ asset('images/main/3.png') }}" alt="" width="100%">
+    <img id="title-img" src="{{ asset('images-v2/main/3.png') }}" alt="" width="100%">
     <div>
         <form class="" action="{{ route('register') }}" method="POST" style="color: #000;width: 100%;text-align: left;padding: 0px 20px;">
             @csrf
@@ -55,7 +55,7 @@
             </div>
             <div class="mt-5 text-center">
                 <button class="btn-submit-img" type="submit">
-                    <img src="{{ asset('images/main/7.png') }}" alt="" height="70px">
+                    <img src="{{ asset('images-v2/main/7.png') }}" alt="" height="70px">
                 </button>
             </div>
         </form>

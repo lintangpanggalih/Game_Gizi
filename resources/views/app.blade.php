@@ -10,7 +10,7 @@
 @section('content')
     <div class="hero-image">
         <div class="image">
-            <img src="/images/main/welcome.png" alt="Woman eating strawberry" width="100%">
+            <img src="/images-v2/main/welcome.png" alt="Woman eating strawberry" width="100%">
         </div>
         <br>
         {{-- <a class="btn btn-danger" href="{{ route('landing.biodata') }}" role="button">START NOW</a> --}}

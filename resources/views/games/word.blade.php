@@ -33,46 +33,46 @@
         <br>
         <img class="info-img" style="max-width: 100%;">
         <div class="figure-result">
-            <img src="images/gram-berry/22.png" alt="">
+            <img src="images-v2/gram-berry/22.png" alt="">
         </div>
     </div>
     <div id="cardinstruction">
         <div style="text-align: right;">
-            <img src="images/gram-berry/112.png" class="draglogo" style="max-width: 100%;">
+            <img src="images-v2/gram-berry/112.png" class="draglogo" style="max-width: 100%;">
         </div>
         <br>
         <div id="instruction-board">
             Tulis deskripsi dari gambar yang muncul, hafalkan karena merupakan petunjuk untuk permainan selanjutnya.
         </div>
         <div class="btn-start-img">
-            <img src="images/start.png" alt="" style="max-width: 150px;">
+            <img src="images-v2/start.png" alt="" style="max-width: 150px;">
         </div>
         {{-- <div class="figure-instruction">
-            <img src="images/gram-berry/22.png" alt="">
+            <img src="images-v2/gram-berry/22.png" alt="">
         </div> --}}
     </div>
     <div id="cardscore">
         <h1 style="color: gold;">CONGRATULATIONS!</h1>
         <br>
-        <img src="images/gram-berry/112.png" alt="" style="max-width: 100%;">
+        <img src="images-v2/gram-berry/112.png" alt="" style="max-width: 100%;">
         <div class="start-button">
         </div>
         <div class="figure-score">
-            <img src="images/gram-berry/22.png" alt="">
+            <img src="images-v2/gram-berry/22.png" alt="">
             <div class="btn-submit-img">
-                <img src="images/main/7.png" alt="" style="max-width: 150px;">
+                <img src="images-v2/main/7.png" alt="" style="max-width: 150px;">
             </div>
         </div>
     </div>
 
     <!-- <h1>Match the Right Image</h1> -->
     <div style="text-align: right;">
-        <img src="images/gram-berry/28.png" id="draglogo">
+        <img src="images-v2/gram-berry/28.png" id="draglogo">
     </div>
     <main>
         <section id="game">
             <div id="image-container">
-                <img id="game-image" src="images/karbohidrat.png" alt="Gambar yang harus ditebak">
+                <img id="game-image" src="images-v2/karbohidrat.png" alt="Gambar yang harus ditebak">
             </div>
             <div id="letters-field"></div>
             <div id="letters-container"></div>
@@ -93,51 +93,51 @@
     <script>
         // Data gambar dan jawaban
         const data = [{
-                image: "images/gram-berry/karbohidrat.png",
+                image: "images-v2/gram-berry/karbohidrat.png",
                 word: "CUKUPI|KARBOHIDRAT",
-                response_src: 'images/responses/161.png'
+                response_src: 'images-v2/responses/161.png'
             },
             {
-                image: "images/gram-berry/protein.png",
+                image: "images-v2/gram-berry/protein.png",
                 word: "PENUHI|PROTEIN|NABATI",
-                response_src: 'images/responses/164.png'
+                response_src: 'images-v2/responses/164.png'
             },
             {
-                image: "images/gram-berry/garam.png",
+                image: "images-v2/gram-berry/garam.png",
                 word: "1 SENDOK TEH|PERHARI",
-                response_src: 'images/responses/158.png'
+                response_src: 'images-v2/responses/158.png'
             },
             {
-                image: "images/gram-berry/airputih.png",
+                image: "images-v2/gram-berry/airputih.png",
                 word: "8 GELAS|AIR MINERAL",
-                response_src: 'images/responses/157.png'
+                response_src: 'images-v2/responses/157.png'
             },
             {
-                image: "images/gram-berry/gula.png",
+                image: "images-v2/gram-berry/gula.png",
                 word: "4|SENDOK MAKAN|PERHARI",
-                response_src: 'images/responses/160.png'
+                response_src: 'images-v2/responses/160.png'
             },
             {
-                image: "images/gram-berry/minyak.png",
+                image: "images-v2/gram-berry/minyak.png",
                 word: "5|SENDOK MAKAN|PERHARI",
-                response_src: 'images/responses/159.png'
+                response_src: 'images-v2/responses/159.png'
             },
             {
-                image: "images/gram-berry/sayur.png",
+                image: "images-v2/gram-berry/sayur.png",
                 word: "PERBANYAK|SUMBER|SERAT",
-                response_src: 'images/responses/162.png'
+                response_src: 'images-v2/responses/162.png'
             },
             {
-                image: "images/gram-berry/buah.png",
+                image: "images-v2/gram-berry/buah.png",
                 word: "KONSUMSI|2-3|PORSI BUAH",
-                response_src: 'images/responses/163.png'
+                response_src: 'images-v2/responses/163.png'
             },
         ];
 
         $(document).ready(function() {
             let scoreEl = "";
             for (let i = 1; i <= data.length; i++) {
-                scoreEl += `<div class="col" id="scoring${i}"><img src="images/gram-berry/40.png" width="50px"></div>`;
+                scoreEl += `<div class="col" id="scoring${i}"><img src="images-v2/gram-berry/40.png" width="50px"></div>`;
             }
 
             $(".scoring").html(scoreEl);
@@ -253,7 +253,7 @@
             if (guessedWord === currentWord) {
                 // statusElement.textContent = "Selamat! Kamu berhasil!";
                 const dataIndex = currentIndex;
-                $('#scoring' + (dataIndex + 1)).find('img').prop('src', 'images/gram-berry/46.png')
+                $('#scoring' + (dataIndex + 1)).find('img').prop('src', 'images-v2/gram-berry/46.png')
 
                 const response_src = data[currentIndex].response_src
                 $('#cardinfo').find('.info-img').prop('src', response_src)

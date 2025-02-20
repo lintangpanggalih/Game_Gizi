@@ -10,7 +10,7 @@ class UserController extends Controller
 {
     public function showRegisterForm()
     {
-        if (auth()->user()) {
+        if (session('game-stages')) {
             return redirect()->route('landing.map');
         }
 
@@ -21,8 +21,12 @@ class UserController extends Controller
     {
         $user = User::create($request->all());
 
-        Auth::login($user);
-        // return auth()->user();
+        $stages = session()->get('game-stages');
+        if (empty($stages)) {
+            session()->put('game-stages', GameController::$stages);
+            // return 'game is not started';
+        }
+        
         return redirect()->route('landing.map');
     }
 

@@ -60,7 +60,7 @@
             padding: 0cm;
             height: 100vh;
             background: white;
-            background: linear-gradient(0deg, rgba(255, 217, 0, 0.164), rgba(168, 143, 0, 0.1)), url("{{ asset('images/main/main-bg.png') }}");
+            background: linear-gradient(0deg, rgba(255, 217, 0, 0.164), rgba(168, 143, 0, 0.1)), url("{{ asset('images-v2/main/main-bg.png') }}");
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -73,7 +73,7 @@
         }
 
         .input-mask {
-            background-image: url("{{ asset('images/main/6.png') }}");
+            background-image: url("{{ asset('images-v2/main/6.png') }}");
             background-size: cover;
             background-position: 5px center;
             background-repeat: no-repeat;

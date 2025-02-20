@@ -58,54 +58,54 @@
         <br>
         <img class="info-img" style="max-width: 100%;">
         <div class="figure-result">
-            <img src="images/meat-match-up/14.png" alt="">
+            <img src="images-v2/meat-match-up/14.png" alt="">
         </div>
     </div>
     <div id="cardinstruction">
         <div style="text-align: right;">
-            <img src="images/draglogo.png" class="draglogo" style="max-width: 100%;">
+            <img src="images-v2/draglogo.png" class="draglogo" style="max-width: 100%;">
         </div>
         <br>
         <div id="instruction-board">
             Temukan pasangan dari setiap kotak di baris kiri dengan kotak di baris kanan dan pahami pasangannya karena merupakan petunjuk untuk permainan selanjutnya.
         </div>
         <div class="btn-start-img">
-            <img src="images/start.png" alt="" style="max-width: 150px;">
+            <img src="images-v2/start.png" alt="" style="max-width: 150px;">
         </div>
         {{-- <div class="figure-instruction">
-            <img src="images/meat-match-up/14.png" alt="">
+            <img src="images-v2/meat-match-up/14.png" alt="">
         </div> --}}
     </div>
     <div id="cardscore">
         <h1 style="color: gold;">CONGRATULATIONS!</h1>
         <br>
-        <img src="images/meat-match-up/110.png" alt="" style="max-width: 100%;">
+        <img src="images-v2/meat-match-up/110.png" alt="" style="max-width: 100%;">
         <div class="start-button">
         </div>
         <div class="figure-score">
-            <img src="images/meat-match-up/14.png" alt="">
+            <img src="images-v2/meat-match-up/14.png" alt="">
             <div class="btn-submit-img">
-                <img src="images/main/7.png" alt="" style="max-width: 150px;">
+                <img src="images-v2/main/7.png" alt="" style="max-width: 150px;">
             </div>
         </div>
     </div>
     <div style="text-align: right;">
-        <img src="images/draglogo.png" id="draglogo">
+        <img src="images-v2/draglogo.png" id="draglogo">
     </div>
 
     <div class="row m-0" style="width: 100%;">
         <div class="col images" style="padding-right: 0px;">
             <div>
-                <img src="images/drag1.png" alt="Drag1" class="image">
+                <img src="images-v2/drag1.png" alt="Drag1" class="image">
             </div>
             <div>
-                <img src="images/drag2.png" alt="Drag2" class="image">
+                <img src="images-v2/drag2.png" alt="Drag2" class="image">
             </div>
             <div>
-                <img src="images/drag3.png" alt="Drag3" class="image">
+                <img src="images-v2/drag3.png" alt="Drag3" class="image">
             </div>
             <div>
-                <img src="images/drag4.png" alt="Drag4" class="image">
+                <img src="images-v2/drag4.png" alt="Drag4" class="image">
             </div>
         </div>
 
@@ -122,19 +122,19 @@
 
         <div class="col answers" style="position:relative;padding-right: 0px;">
             <div style="position: absolute;">
-                <img src="images/meat-match-up/101.png" data-index="1" id="draggable1" class="answer draggable" draggable="true" data-target="target1" data-src="images/meat-match-up/159.png">
+                <img src="images-v2/meat-match-up/101.png" data-index="1" id="draggable1" class="answer draggable" draggable="true" data-target="target1" data-src="images-v2/meat-match-up/159.png">
             </div>
             <div style="position: absolute;top:80px;">
-                <img src="images/meat-match-up/99.png" data-index="2" id="draggable2" class="answer draggable" draggable="true" data-target="target2" data-src="images/meat-match-up/160.png">
+                <img src="images-v2/meat-match-up/99.png" data-index="2" id="draggable2" class="answer draggable" draggable="true" data-target="target2" data-src="images-v2/meat-match-up/160.png">
             </div>
             <div style="position: absolute;top:160px;">
-                <img src="images/meat-match-up/102.png" data-index="3" id="draggable3" class="answer draggable" draggable="true" data-target="target3" data-src="images/meat-match-up/157.png">
+                <img src="images-v2/meat-match-up/102.png" data-index="3" id="draggable3" class="answer draggable" draggable="true" data-target="target3" data-src="images-v2/meat-match-up/157.png">
             </div>
             <div style="position: absolute;top:240px;">
-                <img src="images/meat-match-up/98.png" data-index="4" id="draggable4" class="answer draggable" draggable="true" data-target="target4" data-src="images/meat-match-up/158.png">
+                <img src="images-v2/meat-match-up/98.png" data-index="4" id="draggable4" class="answer draggable" draggable="true" data-target="target4" data-src="images-v2/meat-match-up/158.png">
             </div>
             <div style="position: absolute;top:320px;">
-                <img src="images/meat-match-up/100.png" data-index="5" id="draggable5" class="answer draggable" draggable="true" data-target="target5" data-src="images/meat-match-up/157.png">
+                <img src="images-v2/meat-match-up/100.png" data-index="5" id="draggable5" class="answer draggable" draggable="true" data-target="target5" data-src="images-v2/meat-match-up/157.png">
             </div>
         </div>
     </div>
@@ -197,7 +197,7 @@
 
                         // scoring
                         const dataIndex = target.dataset.index
-                        $('#scoring' + dataIndex).find('img').prop('src', 'images/meat-match-up/44.png')
+                        $('#scoring' + dataIndex).find('img').prop('src', 'images-v2/meat-match-up/44.png')
 
                         score += 1;
 
@@ -267,7 +267,7 @@
             const targetEl = $('.target');
             let scoreEl = ''
             for (let i = 1; i <= targetEl.length; i++) {
-                scoreEl += `<div class="col" id="scoring${i}"><img src="images/meat-match-up/38.png" width="50px"></div>`
+                scoreEl += `<div class="col" id="scoring${i}"><img src="images-v2/meat-match-up/38.png" width="50px"></div>`
             }
 
             $('.scoring').html(scoreEl)
