@@ -4,18 +4,43 @@
 @endsection
 
 @section('admin-content')
+    @if ($message = Session::get('error'))
+        <div class="alert alert-danger alert-block">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <strong>{{ $message }}</strong>
+        </div>
+    @endif
+
+    @if (count($errors) > 0)
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
     <div class="card mb-5">
-        <form action="{{ route('admin.game-token.generate') }}">
+        <form action="{{ route('admin.game-token.generate') }}" method="POST">
+            @csrf
             <div class="card-body">
                 <h5 class="text-dark mb-3">Add Game Token</h5>
                 <div class="d-flex">
                     <div class="form-group col">
                         <label for="token">Token</label>
-                        <input class="form-control" type="token" id="token" required>
+                        <select class="form-control" name="url" id="url" required>
+                            <option value="gamegizi.fun">gamegizi.fun</option>
+                            <option value="test.gamegizi.fun">test.gamegizi.fun</option>
+                        </select>
+                    </div>
+                    <div class="form-group col">
+                        <label for="token">Token</label>
+                        <input class="form-control" type="text" name="token" id="token" required>
                     </div>
                     <div class="form-group col">
                         <label for="description">Description</label>
-                        <input class="form-control" type="description" id="description" required>
+                        <input class="form-control" type="text" name="description" id="description" required>
                     </div>
                 </div>
                 <div style="text-align:right;">
@@ -47,7 +72,14 @@
                                 <td>{{ $token['token'] }}</td>
                                 <td>{{ $token['description'] }}</td>
                                 <td>{{ $token['status'] }}</td>
-                                <td></td>
+                                <td>
+                                    <div class="d-flex">
+                                        <button class="btn btn-icon" data-toggle="modal" data-target="#showQrcodeModal"
+                                            data-id="{{ $token->id }}">
+                                            <i class="fa fa-qrcode"></i>
+                                        </button>
+                                    </div>
+                                </td>
                             </tr>
                         @endforeach
 
@@ -56,4 +88,39 @@
             </div>
         </div>
     </div>
+    <div class="modal" id="showQrcodeModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">QRCODE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    ....
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
+@push('scripts')
+    <script>
+        $(document).ready(function() {
+            $('#showQrcodeModal').on('show.bs.modal', function(e) {
+                const $this = $(this),
+                    btn = $(e.relatedTarget),
+                    url = "{{ route('admin.game-token.qrcode', ':id') }}".replace(':id', btn.data('id'));
+                console.log(url);
+
+                $.get(url, function(response) {
+                    $this.find('.modal-body').html(response)
+                })
+            })
+        })
+    </script>
+@endpush

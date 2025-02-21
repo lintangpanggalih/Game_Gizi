@@ -2,12 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\GameToken;
 use Illuminate\Http\Request;
 
 class LandingController extends Controller
 {
     public function index()
     {
+        $request = Request::capture();
+        $token = $request->get('game-token');
+
+        $is_permit = GameToken::where('token', $token)->count();
+        if (!$is_permit) {
+            abort(403);
+        }
+
         return view('app');
     }
 

@@ -140,7 +140,7 @@
     <script src="{{ asset('vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
 
     <script src="{{ asset('js/demo/datatables-demo.js') }}"></script>
-
+    @stack('scripts')
 </body>
 
 </html>

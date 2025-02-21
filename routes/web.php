@@ -37,4 +37,5 @@ Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function () 
     Route::get('/logout', [UserController::class, 'logout'])->name('logout');
     Route::get('/game-tokens', [AdminController::class, 'tokenList'])->name('token-list');
     Route::post('/game-tokens', [AdminController::class, 'generateToken'])->name('game-token.generate');
+    Route::get('/game-tokens/{id}/qrcode', [AdminController::class, 'tokenQrcode'])->name('game-token.qrcode');
 });
