@@ -12,9 +12,10 @@ route::get('/', [LandingController::class, 'index'])->name('landing.index');
 Route::group(['middleware' => 'guest'], function () {
     Route::get('/login', [UserController::class, 'login'])->name('login');
     Route::post('/authenticate', [LoginController::class, 'authenticate'])->name('authenticate');
-    Route::get('/register', [UserController::class, 'showRegisterForm'])->name('landing.registration');
-    Route::post('/register', [UserController::class, 'register'])->name('register');
 });
+
+Route::get('/register', [UserController::class, 'showRegisterForm'])->name('landing.registration');
+Route::post('/register', [UserController::class, 'register'])->name('register');
 
 Route::group(['middleware' => 'game-stages'], function () {
     route::get('map', [LandingController::class, 'map'])->name('landing.map');

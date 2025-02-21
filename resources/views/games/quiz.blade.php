@@ -121,10 +121,10 @@
                 question: "Pedoman Gizi Seimbang di Indonesia saat ini adalah <br> <b>4 Sehat 5 Sempurna</b>",
                 options: ["True", "False"],
                 answer: "False",
-                response_src: 'images-v2/responses/166.png'
+                response_src: 'images-v2/responses/165.png'
             },
             {
-                question: "Pedoman Gizi Seimbang di Indonesia saat ini adalah <br> <b>Empat pilar gizi seimbang.</b>",
+                question: "Pedoman Gizi Seimbang di Indonesia saat ini adalah <br> <b>Tumpeng gizi seimbang.</b>",
                 options: ["True", "False"],
                 answer: "True",
                 response_src: 'images-v2/responses/165.png'
@@ -151,7 +151,7 @@
                 question: "Lapisan kedua terdapat buah dan sayuran sebagai sumber vitamin, mineral, dan serat pangan. Kandungan buah dan sayur sangat bermanfaat dalam proses metabolisme atau proses bekerjanya fungsi tubuh. Sementara itu, porsi buah disarankan untuk dikonsumsi sebanyak 2-3 porsi dalam satu hari.",
                 options: ["True", "False"],
                 answer: "True",
-                response_src: 'images-v2/responses/162.png'
+                response_src: 'images-v2/responses/163.png'
             },
             {
                 question: "Lapisan ketiga terdapat lauk-pauk hewani, susu, serta sumber protein dan lemak lainnya.Protein adalah zat pembangun yang penting bagi kesehatan tubuh.Porsi protein yang disarankan adalah 4-5 porsi makanan sumber protein setiap harinya.",
