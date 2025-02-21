@@ -59,9 +59,9 @@
                     <thead>
                         <tr>
                             <th>ID</th>
+                            <th>URL</th>
                             <th>Token</th>
                             <th>Description</th>
-                            <th>Status</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -69,8 +69,8 @@
                         @foreach ($tokens as $token)
                             <tr>
                                 <td>{{ $token['id'] }}</td>
+                                <td>{{ $token['url'] }}</td>
                                 <td>{{ $token['token'] }}</td>
-                                <td>{{ $token['description'] }}</td>
                                 <td>{{ $token['status'] }}</td>
                                 <td>
                                     <div class="d-flex">
