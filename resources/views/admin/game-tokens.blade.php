@@ -30,8 +30,8 @@
                     <div class="form-group col">
                         <label for="token">Token</label>
                         <select class="form-control" name="url" id="url" required>
-                            <option value="gamegizi.fun">gamegizi.fun</option>
-                            <option value="test.gamegizi.fun">test.gamegizi.fun</option>
+                            <option value="https://gamegizi.fun">gamegizi.fun</option>
+                            <option value="https://test.gamegizi.fun">test.gamegizi.fun</option>
                         </select>
                     </div>
                     <div class="form-group col">
