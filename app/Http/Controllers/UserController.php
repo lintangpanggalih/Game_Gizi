@@ -34,7 +34,7 @@ class UserController extends Controller
 
         $stages = session()->get('game-stages');
         if (empty($stages)) {
-            session()->put('game-stages', GameController::$stages);
+            session()->put('game-stages', ['user' => $user]);
             // return 'game is not started';
         }
 
