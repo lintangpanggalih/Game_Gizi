@@ -13,7 +13,7 @@ class AdminController extends Controller
 {
     public function index()
     {
-        $userdata = User::all();
+        $userdata = DB::table('respondens')->get();
         return view('admin.users', ['users' => $userdata]);
     }
 
@@ -48,5 +48,22 @@ class AdminController extends Controller
 
         DB::commit();
         return redirect()->route('admin.token-list');
+    }
+
+    public function moodboardResult($user_id = null)
+    {
+        $results = DB::table('results')
+            ->join('answers', 'results.answer_id', 'answers.id')
+            ->join('respondens', 'results.responden_id', 'respondens.id')
+            ->select('responden_id', 'respondens.name', DB::raw('DATE(results.created_at) as date'), DB::raw('COUNT("results.id") as correct_answers'))
+            ->where('answers.is_correct', 1)
+            ->when($user_id, function ($q) use ($user_id) {
+                return $q->where('responden_id', $user_id);
+            })
+            ->groupBy('results.responden_id')
+            ->groupBy(DB::raw('DATE(results.created_at)'))
+            ->get();
+
+        return $results;
     }
 }
