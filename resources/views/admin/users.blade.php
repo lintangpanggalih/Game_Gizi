@@ -57,23 +57,6 @@
                 </div>
                 <div class="modal-body">
                     ....
-                    <h6 class="col-12"><b>2025-12-12</b></h6>
-                    <div class="row">
-                        <div class="col-1">Name </div>
-                        <div class="col-auto">: Senna</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-1">Name </div>
-                        <div class="col-auto">: Senna</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-1">Name </div>
-                        <div class="col-auto">: Senna</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-1">Name </div>
-                        <div class="col-auto">: Senna</div>
-                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
