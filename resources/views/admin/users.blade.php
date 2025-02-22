@@ -68,7 +68,7 @@
 @push('scripts')
     <script>
         $(document).ready(function() {
-            $('#resultModal').modal('show')
+            // $('#resultModal').modal('show')
             $('#resultModal').on('show.bs.modal', function(e) {
                 const $this = $(this),
                     btn = $(e.relatedTarget),
