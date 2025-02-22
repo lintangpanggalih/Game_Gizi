@@ -43,7 +43,8 @@ class AdminController extends Controller
             ]);
         } catch (\Throwable $th) {
             DB::rollBack();
-            return back()->with('error', 'Failed to generate token.')->withInput();
+            //return response()->json([$th->getMessage()]);
+	    return back()->with('error', 'Failed to generate token.')->withInput();
         }
 
         DB::commit();
