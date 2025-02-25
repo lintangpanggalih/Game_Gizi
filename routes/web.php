@@ -38,5 +38,6 @@ Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function () 
     Route::get('/game-tokens', [AdminController::class, 'tokenList'])->name('token-list');
     Route::post('/game-tokens', [AdminController::class, 'generateToken'])->name('game-token.generate');
     Route::get('/game-tokens/{id}/qrcode', [AdminController::class, 'tokenQrcode'])->name('game-token.qrcode');
+    Route::get('/moodboard/result/export', [AdminController::class, 'moodboardResultExport'])->name('moodboard.export-result');
     Route::get('/moodboard/result/{user_id?}', [AdminController::class, 'moodboardResult'])->name('moodboard.result');
 });

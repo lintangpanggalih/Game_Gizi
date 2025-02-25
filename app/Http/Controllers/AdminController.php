@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\MoodBoardResult;
 use App\Models\GameToken;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Maatwebsite\Excel\Excel;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class AdminController extends Controller
@@ -56,15 +58,22 @@ class AdminController extends Controller
         $results = DB::table('results')
             ->join('answers', 'results.answer_id', 'answers.id')
             ->join('respondens', 'results.responden_id', 'respondens.id')
-            ->select('responden_id', DB::raw('DATE(results.created_at) as date'), DB::raw('COUNT("results.id") as correct_answers'))
+            ->select('responden_id', DB::raw('results.created_at as date'), DB::raw('COUNT("results.id") as correct_answers'))
             ->where('answers.is_correct', 1)
             ->when($user_id, function ($q) use ($user_id) {
                 return $q->where('responden_id', $user_id);
             })
             ->groupBy('results.responden_id')
-            ->groupBy(DB::raw('DATE(results.created_at)'))
+            ->groupBy(DB::raw('results.created_at'))
             ->get();
 
         return $results;
+    }
+
+    public function moodboardResultExport(Request $request)
+    {
+        $export = new MoodBoardResult();
+        return $export->download('test.xlsx', Excel::XLSX);
+        return $export->getData();
     }
 }

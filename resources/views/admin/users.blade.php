@@ -6,7 +6,10 @@
 @section('admin-content')
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Users Table</h6>
+            <div class="d-flex justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">Users Table</h6>
+                <a href="{{ route('admin.moodboard.export-result') }}" class="btn btn-success btn-sm">Export</a>
+            </div>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -25,7 +28,7 @@
                     </thead>
                     <tbody>
                         @foreach ($users as $user)
-                        {{-- @dd($user->id) --}}
+                            {{-- @dd($user->id) --}}
                             <tr>
                                 <td>{{ $user->id }}</td>
                                 <td>{{ $user->name }}</td>
@@ -45,7 +48,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="modal" id="resultModal" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
@@ -66,6 +69,7 @@
     </div>
 @endsection
 @push('scripts')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
     <script>
         $(document).ready(function() {
             // $('#resultModal').modal('show')
@@ -75,13 +79,17 @@
                     url = "{{ route('admin.moodboard.result', ':id') }}".replace(':id', btn.data('id'));
                 console.log(url);
 
-                let content = '' 
+                let content = ''
                 $.get(url, function(response) {
                     for (const key in response) {
-                        console.log(response[key]);
-                        const data = response[key];
+                        const data = response[key],
+                            date_separator = moment('2025-02-22 09:00:00'),
+                            title = (moment(data.date) > date_separator) ? 'POST TEST' : 'PRE TEST';
                         content += `
-                            <h6 class="mb-1"><b>${data.date}</b></h6>
+                            <h6 class="text-dark mb-1">
+                                <b>${title}</b><br>
+                                <small>${data.date}</small>
+                            </h6>
                             <div class="row mb-3">
                                 <div class="col-1">Score: </div>
                                 <div class="col-auto">: ${parseFloat(data.correct_answers) * 12.5}</div>
@@ -94,4 +102,3 @@
         })
     </script>
 @endpush
-
